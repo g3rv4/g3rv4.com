@@ -15,6 +15,7 @@ tags:
 modified_time: '2014-03-22T17:29:45.754-03:00'
 blogger_id: tag:blogger.com,1999:blog-7815098159792356641.post-707117977205176196
 blogger_orig_url: http://blog.gmc.uy/2014/03/a-restful-bridge-to-send-and-receive.html
+priority: 0.6
 ---
 I'm pretty proud of this little project... It's just a small python app that polls via telnet to a Portech MV-372 and checks if any new text messages arrived. If they did, it posts them to a RESTful API. It also exposes a RESTful API for other applications to send messages. The beauty? it works! despite the awful [AT Commands](https://en.wikipedia.org/wiki/Hayes_command_set).
 

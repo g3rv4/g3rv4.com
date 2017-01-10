@@ -31,7 +31,7 @@ I found the [dougbtv/asterisk](https://hub.docker.com/r/dougbtv/asterisk/) image
 3. Mount the etc, spool and log directories so that I can do modifications and see them on the host
 4. If the etc folder is empty, copy the default files so that I have something to work with... if it has files, just leave it as it is
 
-Soooo... I ended up building [gmcuy/asterisk](https://hub.docker.com/r/g3rv4/asterisk/) (you can see the Dockerfile in there).
+Soooo... I ended up building [g3rv4/asterisk](https://hub.docker.com/r/g3rv4/asterisk/) (you can see the Dockerfile in there).
 
 After several trials and errors (all using different `RUN`s so that I could reuse the intermediate images and either find out the different `menuselect/menuselect` options or debug which libraries I was missing) I ended up putting everything on a single run so that:
 

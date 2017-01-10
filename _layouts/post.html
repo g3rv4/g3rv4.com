@@ -11,7 +11,11 @@ layout: default
   {% if page.tags.size > 0 %}
     <span class="post-tags">
       {% for tag in page.tags %}
-        <a href="{{tag | datapage_url: '/tags' | remove: '.html'}}">[{{tag}}]</a>
+        {% if site.data.linkedTags contains tag %}
+          <a href="{{tag | datapage_url: '/tags' | remove: '.html'}}">[{{tag}}]</a>
+        {% else %}
+          <span>[{{tag}}]</span>
+        {% endif %}
       {% endfor %}
     </span>
   {% endif %}

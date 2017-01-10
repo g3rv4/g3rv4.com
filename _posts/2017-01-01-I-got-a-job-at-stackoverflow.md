@@ -5,6 +5,7 @@ description: "My experience interviewing for an Engineering position at Stack Ov
 date: '2017-01-05T00:40:00.000-03:00'
 tags:
 - Stack Overflow
+priority: 0.7
 ---
 My experience interviewing for a job at Stack Overflow (and actually getting it!). The most interesting thing is probably the quality of the blog posts I link to. On the long weeks that the whole interviewing process took place, I scraped the internet looking for other people's experiences... so here I try to "pay it forward" to my future Stackers!
 

@@ -13,7 +13,11 @@ tags: {{ page.tag }}
 {% if post.tags %}
   <span class="post-tags">
     {% for tag in post.tags %}
-      <a href="{{tag | datapage_url: '/tags' | remove: '.html'}}">[{{tag}}]</a>
+      {% if site.data.linkedTags contains tag %}
+        <a href="{{tag | datapage_url: '/tags' | remove: '.html'}}">[{{tag}}]</a>
+      {% else %}
+        <span>[{{tag}}]</span>
+      {% endif %}
       {% if forloop.index0 == 4 %}
         {% break %}
       {% endif %}

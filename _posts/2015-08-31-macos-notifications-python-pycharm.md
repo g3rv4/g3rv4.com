@@ -16,6 +16,7 @@ tags:
 modified_time: '2015-09-02T19:06:14.175-03:00'
 blogger_id: tag:blogger.com,1999:blog-7815098159792356641.post-5282861200093004190
 blogger_orig_url: http://blog.gmc.uy/2015/08/mac-os-notifications-python-pyobjc.html
+priority: 0.5
 ---
 I built a small python app that notifies me about when my local currency changes... what's interesting about it is that it uses OSX's built in notification system. On this post I explain how I made it happen.
 

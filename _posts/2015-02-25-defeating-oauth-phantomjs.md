@@ -11,6 +11,7 @@ tags:
 modified_time: '2015-09-16T19:40:48.943-03:00'
 blogger_id: tag:blogger.com,1999:blog-7815098159792356641.post-3741580046731553688
 blogger_orig_url: http://blog.gmc.uy/2015/02/defeating-oauth-with-phantomjs.html
+priority: 0.5
 ---
 TL;DR: As part of a system to report the time I've worked on an issue from TimeDoctor to JIRA, I'm doing the OAuth2 dance using selenium and PhantomJS (effectively doing what OAuth2 without a password grant tries to avoid... having the application know the user password).
 

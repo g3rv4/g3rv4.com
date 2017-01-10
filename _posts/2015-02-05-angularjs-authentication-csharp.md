@@ -14,6 +14,7 @@ tags:
 modified_time: '2015-02-06T18:41:35.903-02:00'
 blogger_id: tag:blogger.com,1999:blog-7815098159792356641.post-881335462355661846
 blogger_orig_url: http://blog.gmc.uy/2015/02/my-take-on-angularjs-authentication.html
+priority: 0.7
 ---
 Doing authentication and authorization of an AngularJS application with a C# backend, using signed tokens... I thought a lot about security, is it enough? I'm not sure, but I surely like this article :)
 

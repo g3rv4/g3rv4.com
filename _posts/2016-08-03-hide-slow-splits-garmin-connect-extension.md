@@ -11,6 +11,7 @@ tags:
 - chrome
 - running
 modified_time: '2016-08-03T19:21:05.880-03:00'
+priority: 0.5
 ---
 A quick tail of how I started running and built a [Chrome Extension](https://chrome.google.com/webstore/detail/hide-slow-splits/clnbkgfhjkcccgodmjpjnplfkijjhhil) that modifies the XHR requests/responses to trick the Garmin Connect web application to show me what I want to see... extensions have _so much power_ over what we see.
 

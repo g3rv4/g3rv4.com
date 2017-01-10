@@ -10,5 +10,8 @@ Jekyll::Hooks.register :site, :post_read do |site|
       tags[tag]['articles']+=1
     end
   end
-  site.data["tags"] = tags.values
+  tags = tags.values.select { |tag| tag['articles'] > 1 }.sort_by { |tag| -tag['articles'] }
+
+  site.data["tags"] = tags
+  site.data["linkedTags"] = tags.map { |tag| tag['tag'] }
 end
