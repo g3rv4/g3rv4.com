@@ -38,7 +38,7 @@ Then, I wanted to add `target="blank"` and `rel="nofollow"` to all the external 
 
 I also wanted to have a page per tag, so that my visitors could click on a tag and see all the articles that I wrote with that particular tag. To do that, I used the [jekyll-datapage_gen plugin](https://github.com/avillafiorita/jekyll-datapage_gen)... but that plugin relies on you entering the source data as a YAML or JSON file... and I wanted it to be generated dinamically... so [I wrote a plugin](https://github.com/g3rv4/g3rv4.com/blob/master/_plugins/generate-tags-data.rb) that populates the `data` element of the site with the tags when the posts are read.
 
-The other cool thing I did was building a [tags page](https://github.com/g3rv4/g3rv4.com/blob/master/tags.md). It's a page for crawlers that contains all the tags used on the site and lets you click on them to see the articles related.
+The other cool thing I did was building a tags page (that I removed when I implemented my [sitemap](https://github.com/g3rv4/g3rv4.com/blob/master/sitemap.xml)). It's a page for crawlers that contains all the tags used on the site and lets you click on them to see the articles related.
 
 Oh, and other cool thing... I have excerpts for my posts, that are shown on the index page but hidden on the post page... Doing that was just updating the posts layout to just remove it :)
 

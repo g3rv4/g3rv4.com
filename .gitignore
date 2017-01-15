@@ -1,5 +1,6 @@
 run.rb
 version.json
+.sass-cache/
 
 # Ignore docs files
 _gh_pages

@@ -1,0 +1,14 @@
+<header class="site-header">
+  <div class="logo-placeholder"></div>
+  <div class="page-links">
+    <a class="page-link" href="{{ site.baseurl }}">Home</a>
+    {% assign pages_list = site.pages %}
+    {% for node in pages_list %}
+      {% if node.title != null and node.hide_from_sidebar != true %}
+        {% if node.layout == "page" %}
+          • <a class="page-link" href="{{ node.url }}">{{ node.title }}</a>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</header>

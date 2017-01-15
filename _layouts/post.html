@@ -1,50 +1,58 @@
 ---
 layout: default
+use_iframe: not page.avoid_comments
 ---
+<main class="content" role="main">
+  <article class="post">
+    <div class="post-meta">
+      <h1 class="post-title">{{ page.title }}</h1>
+    </div>
 
-<div class="post">
-  <h1 class="post-title">{{ page.title }}</h1>
-  {% if page.subtitle != null %}
-  <h2 class="post-subtitle">{{ page.subtitle }}</h2>
-  {% endif %}
-  <span class="post-date">{{ page.date | date_to_string }}
-  {% if page.tags.size > 0 %}
-    <span class="post-tags">
-      {% for tag in page.tags %}
-        {% if site.data.linkedTags contains tag %}
-          <a href="{{tag | datapage_url: '/tags' | remove: '.html'}}">[{{tag}}]</a>
-        {% else %}
-          <span>[{{tag}}]</span>
-        {% endif %}
-      {% endfor %}
-    </span>
-  {% endif %}
-  </span>
-  {{ content | remove_first:page.excerpt | extlinks:page }}
-</div>
+    <section class="post-content">
+      <a name="topofpage"></a>
+      {{content | remove_first:page.excerpt | extlinks:page}}
+    </section>
+    <div class="bottom-teaser cf">
+      <div class="isLeft">
+        <h5 class="index-headline featured"><span>Written by</span></h5>
+        <section class="author">
+          <div class="author-image"></div>
+          <h4>{{ site.name }}</h4>
+          <p>
+            <span>
+              {% if site.stack_url %}
+                {% include icon-stack.html url=site.stack_url %}
+              {% endif %}
+            </span>
 
-{% if page.avoid_comments %}
-Comments? <a href="https://twitter.com/intent/tweet?user_id=77212546">Mention me on twitter!</a>
-{% else %}
-Comments? Leave them here or <a href="https://twitter.com/intent/tweet?user_id=77212546">mention me on twitter!</a>
-<div id="disqus_thread"></div>
-<script>
-
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
-var disqus_config = function () {
-this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = '//g3rv4.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-{% endif %}
+            <span>
+              {% if site.twitter_username %}
+                {% include icon-twitter.html username=site.twitter_username %}
+              {% endif %}
+            </span>
+          </p>
+          <hr>
+          <p class="published">Published <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time></p>
+        </section>
+      </div>
+      <div class="isRight">
+        <h5 class="index-headline featured">&nbsp;</h5>
+        <footer class="site-footer">
+          <section class="inner">Built using <a href="http://jekyllrb.com" target="_blank" rel="nofollow"> Jekyll</a> and <a href="https://github.com/ageitgey/amplify" target="_blank" rel="nofollow">Amplify</a>.<br/>Amazing speed thanks to <a href="https://www.cloudflare.com/" target="_blank" rel="nofollow">cloudflare</a>.</section>
+          <section>version {{site.data.version | slice: 0, 7}}</section>
+        </footer>
+      </div>
+    </div>
+    <section class="post-content" style="margin-top: 40px;">
+      {% unless page.avoid_comments %}
+        <amp-iframe width=600 height=140
+            layout="responsive"
+            sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms"
+            resizable
+            src="https://gh.g3rv4.com/disqus.html#{{page.url}};{{page.title}}">
+            <div overflow tabindex=0 role=button aria-label="" placeholder>Loading...</div>
+        </amp-iframe>
+      {% endunless %}
+    </section>
+  </article>
+</main>

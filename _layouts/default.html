@@ -1,24 +1,21 @@
 <!DOCTYPE html>
-<html lang="en-us">
-
+<html ⚡ lang="en">
   {% include head.html %}
-
   <body>
+    {% include header.html %}
 
-    {% include sidebar.html %}
+    {{ content }}
 
-    <div class="content container">
-      {{ content | extlinks:page }}
-    </div>
+    {% include analytics.html %}
 
-  </body>
-  <script>window.twttr = (function(d, s, id) {
+    <script>window.twttr = (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0],
     t = window.twttr || {};
   if (d.getElementById(id)) return t;
   js = d.createElement(s);
   js.id = id;
   js.src = "https://platform.twitter.com/widgets.js";
+  js.async = 1;
   fjs.parentNode.insertBefore(js, fjs);
 
   t._e = [];
@@ -28,14 +25,5 @@
 
   return t;
 }(document, "script", "twitter-wjs"));</script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-63055108-3', 'auto');
-  ga('send', 'pageview');
-
-</script>
+  </body>
 </html>

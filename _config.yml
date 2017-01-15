@@ -3,29 +3,34 @@ markdown:         kramdown
 highlighter:      rouge
 
 # Permalinks
-permalink:        pretty
+permalink:        pretty #local
+#prod:permalink:        /:year/:month/:title
 
 # Setup
-title:            'g3rv4'
+title:            g3rv4
 tagline:          'Gervasio Marchand'
 description:      'A blog written by a <i>very</i> lucky nerd'
 meta_description: "Welcome to my blog. I'm Gervasio, currently working as a developer at Stack Overflow. I'm a nerd that loves doing nerdy stuff (unless it involves nerd movies)"
 meta_tags:        ['blog', 'nerd', 'gervasio marchand', 'programming']
 url:              https://g3rv4.com
 baseurl:          /
+analytics_id:     UA-63055108-3
 
-author:
-  name:           'Gervasio Marchand'
-  url:            https://twitter.com/g3rv4
+name:             Gervasio Marchand
+
+twitter_username: g3rv4
+stack_url:        http://stackoverflow.com/users/920295/g3rv4
+author_image:     public/images/g3rv4.jpg
+logo:             public/images/g3rv4.jpg
 
 paginate:         30
 excerpt_separator: <!--more-->
 
 extlinks:
   attributes: {rel: nofollow, target: _blank}
-  check_links: false
+  check_links: false #local
+#prod:  check_links: true
   check_exclude: ['twitter.com', 'disqus.com']
-#  rel_exclude: ['host1.com', 'host2.net']
 
 page_gen:
   - data: tags
@@ -34,6 +39,9 @@ page_gen:
     dir: tags
     dirs: true
 
-# Custom vars
-version:          2.1.0
-gems: [jekyll-paginate]
+#prod:sass:
+#prod:  style: compressed
+
+gems:
+  - jekyll-paginate
+#prod:  - octopress-minify-html
