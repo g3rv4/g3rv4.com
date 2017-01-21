@@ -20,14 +20,13 @@ use_iframe: not page.avoid_comments
           <h4>{{ site.name }}</h4>
           <p>
             <span>
-              {% if site.stack_url %}
-                {% include icon-stack.html url=site.stack_url %}
-              {% endif %}
-            </span>
-
-            <span>
               {% if site.twitter_username %}
                 {% include icon-twitter.html username=site.twitter_username %}
+              {% endif %}
+            </span>
+            <span>
+              {% if site.stack_url %}
+                {% include icon-stack.html url=site.stack_url %}
               {% endif %}
             </span>
           </p>
