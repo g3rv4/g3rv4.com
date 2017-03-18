@@ -26,8 +26,8 @@ First, make sure you check out the posts from my amazing coworkers talking about
   * [Part III](http://konamiman.blogspot.com/2016/09/un-mallorquin-en-la-corte-del-rey.html)
 
 And this is not related to his experience interviewing or getting started at Stack, but I think these articles by Alex are a must read:
-* [How to Be Awesome (Part 1)](https://stackoverflow.blog/2015/09/how-to-be-awesome/)
-* [How to Be Awesome (Part 2)](https://stackoverflow.blog/2015/11/how-to-be-awesome-part-2/)
+* [How to Be Awesome (Part 1)](https://stackoverflow.blog/2015/09/29/how-to-be-awesome/)
+* [How to Be Awesome (Part 2)](https://stackoverflow.blog/2015/11/24/how-to-be-awesome-part-2/)
 
 Only once you've read those articles you should proceed with this one, so go ahead and check them out, I'll wait.
 
@@ -49,7 +49,7 @@ So I clicked on send, I received an automated response (saying something along t
 ## They called! (well, emailed)
 After a couple of weeks, I got an email from a human@stackoverflow.com (it was the awesome Tom Harvey) apologizing for the delay and asking if I was still interested in the position. Ha, they were asking *me* if I was interested. A *Stack Overflow recruiter* was asking *me* if I was interested in their position. Of course I replied instantly and we set up an initial call for the next day.
 
-He was awesome, he explained how the process worked and sent me a link to [this video](https://stackoverflow.blog/2016/02/the-stack-overflow-interviewing-process/) which was [transcribed by the good folks at Greenhouse](https://www.greenhouse.io/blog/inside-the-6-stages-of-stack-overflows-technical-interview-process) (if you're applying to Stack or interested in how to perform great technical interviews, you **want** to see the video, lots of good content). He made sure my questions were answered and he asked me how much I wanted to make. My honest response was "I'm making $X per hour, but if I had the opportunity to work with you guys, I wouldn't mind the money".
+He was awesome, he explained how the process worked and sent me a link to [this video](https://stackoverflow.blog/2016/02/18/the-stack-overflow-interviewing-process/) which was [transcribed by the good folks at Greenhouse](https://www.greenhouse.io/blog/inside-the-6-stages-of-stack-overflows-technical-interview-process) (if you're applying to Stack or interested in how to perform great technical interviews, you **want** to see the video, lots of good content). He made sure my questions were answered and he asked me how much I wanted to make. My honest response was "I'm making $X per hour, but if I had the opportunity to work with you guys, I wouldn't mind the money".
 
 I saw that video (go check it out) and that's when I realized that my cover letter hit almost all the points they look for. I kind of hated me for not seeing the video *before* applying, but I was super happy that I nailed that not knowing, it felt like something was genuinely right. It impressed me how much they wanted all candidates (even the rejected ones) to have a great experience applying to Stack.
 
