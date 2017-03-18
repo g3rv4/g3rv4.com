@@ -42,16 +42,5 @@ use_iframe: not page.avoid_comments
         </footer>
       </div>
     </div>
-    <section class="post-content" style="margin-top: 40px;">
-      {% unless page.avoid_comments %}
-        <amp-iframe width=600 height=140
-            layout="responsive"
-            sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms"
-            resizable
-            src="https://gh.g3rv4.com/disqus.html#{{page.url}};{{page.title}}">
-            <div overflow tabindex=0 role=button aria-label="" placeholder>Loading...</div>
-        </amp-iframe>
-      {% endunless %}
-    </section>
   </article>
 </main>

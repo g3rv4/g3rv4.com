@@ -13,8 +13,6 @@ process = Proc.new {|post|
         img['width'] = size[0]
         img['height'] = size[1]
       end
-
-      post.output = doc.to_s.sub! "html lang", "html ⚡ lang"
     end
 }
 
