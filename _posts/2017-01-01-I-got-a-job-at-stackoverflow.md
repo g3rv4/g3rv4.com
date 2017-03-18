@@ -104,7 +104,7 @@ I took it with all the positive energy I had in me. I blew the interview with Da
 
 And I had an interview with Haney. It went great, I felt we connected on various levels, sharing some views regarding how to work in a team, open source and the Stack Overflow way. I had read his blog before the interview, so I was able to ask specific questions about things he made public there.
 
-### And I made it!
+## And I made it!
 A couple days after, I got the very much anticipated email from Tom saying that they wanted to make me an offer to join their Engineering team.... WOW! I HAD MADE IT!!! At some point in my life I seriously considered moving to the US looking for challenging job opportunities, and I somehow managed to get a job at an amazing company without leaving my country.
 
 And then, on our offer call with Tom, I told him that I was so bummed when I blew the interview with David... and that's when he said that I hadn't actually blown it, that the comments were really positive... it's incredible how badly I read that interview, but I think it was still a good thing, it let me adjust my mindset, and I'm really proud of having been able to do that.

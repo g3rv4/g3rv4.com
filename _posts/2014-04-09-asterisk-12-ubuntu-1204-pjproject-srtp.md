@@ -23,7 +23,7 @@ Today I had to install an Asterisk that could deal with WebRTC. I read [on the A
 
 As I couldn't find a guide with the steps to follow (took bits of information from different sources and figured some things by myself) here's what worked for me. I took a lot from "Asterisk 12 on a Raspberry Pi \| MatthewJordan.net" (now offline) so thanks to Matthew ;) I also enjoyed how he shows what he's doing, so I'm copying that from there too.
 
-### Install the Asterisk dependencies and more stuff we're going to need (I'm also installing libbfd-dev b/c want to use BETTER_BACKTRACES)
+## Install the Asterisk dependencies and more stuff we're going to need (I'm also installing libbfd-dev b/c want to use BETTER_BACKTRACES)
 {% highlight text %}
 gmc@blog:~$ sudo apt-get install build-essential libsqlite3-dev libxml2-dev libncurses5-dev libncursesw5-dev libiksemel-dev libssl-dev libeditline-dev libedit-dev curl libcurl4-gnutls-dev libjansson4 libjansson-dev libuuid1 uuid-dev libxslt1-dev liburiparser-dev liburiparser1 git autoconf libbfd-dev -y
 
@@ -35,7 +35,7 @@ ldconfig deferred processing now taking place
 gmc@blog:~$
 {% endhighlight %}
 
-### Install libsrtp
+## Install libsrtp
 We first download and decompress the files (thanks to Alexander Traud for pointing me out that libsrtp moved to github)
 {% highlight text %}
 gmc@blog:~$ cd ~
@@ -103,7 +103,7 @@ if [ -f libsrtp.a ]; then cp libsrtp.a /usr/lib/; fi
 gmc@blog:~$  
 {% endhighlight %}
 
-### Install pjproject
+## Install pjproject
 Clone the project from its git repo  
 {% highlight text %}
 gmc@blog:~/srtp$ cd ~
@@ -159,7 +159,7 @@ gmc@blog:~$
 
 Done! pjproject is installed! just one more thing...
 
-### Install Asterisk
+## Install Asterisk
 Download an decompress...  
 {% highlight text %}
 gmc@blog:~/pjproject$ cd ~

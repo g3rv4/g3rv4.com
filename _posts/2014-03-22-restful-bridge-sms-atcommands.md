@@ -28,7 +28,7 @@ You need to open a telnet connection to the device and then issue the commands r
 
 Oh, and I forgot... you can only have one concurrent telnet connection open... and that's not all... while there's a connection established, you can't place new calls. That's a lovely scenario to work on, right?
 
-### Goals
+## Goals
 1. Have a RESTful service that let me send and receive texts
 2. Have a RESTful service that lets me ask my carrier how much credit I have on my SIMs
 

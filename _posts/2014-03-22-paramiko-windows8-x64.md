@@ -25,15 +25,15 @@ I wasn't wrong... but when we met again, he told me he had a big headache instal
 
 I finally figured it out, and as it wasn't straightforward (much less pythonic) at all, I decided to write down my steps here... it may save a lot of hours to the next folk that wants to give it a try.
 
-### The (general) problem
+## The (general) problem
 paramiko can't be easily installed on windows because it uses pycrypto... which is a C library that deals with the encryption part.
 
-### The first approach
+## The first approach
 Their website has a link to a bunch of precompiled packages... so I gave that a try first. The right way of installing a package is [by using easy_install](http://stackoverflow.com/a/5442340/920295). It did the set up, but when I tried to import the module, it failed with the message `ImportError: DLL load failed: %1 is not a valid Win32 application.` when its code imported `winrandom`.
 
 On their site they also say that on some 64-bits systems `winrandom` just fails, and the only option is to manually compile it. Oh, what a luck.
 
-### Compiling it
+## Compiling it
 Ok, if that's what it takes... let's try it out. Even if I have Visual Studio, I'd like to keep it out of the equation. [This answer](http://stackoverflow.com/a/21291923/920295) pointed me in the right direction, I had to do it with MinGW.
 
 I had never used it before, but it's extremely straightforward. On the Installation Manager, select the packages

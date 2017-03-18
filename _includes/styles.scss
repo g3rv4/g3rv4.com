@@ -154,6 +154,7 @@ body {
       }
     }
     .post-excerpt {
+      font-family: $font-serif;
       letter-spacing: -0.02em;
       font-weight: 300;
       font-style: normal;
@@ -279,13 +280,13 @@ body {
       font-family: $font-sans;
     }
     h3 {
-      font-size: 36px;
+      font-size: 22px;
     }
     h2, h1 {
       letter-spacing: -0.02em;
       font-weight: 700;
       font-style: normal;
-      font-size: 42px;
+      font-size: 30px;
       line-height: 1.2;
       margin-top: 50px;
       margin-bottom: 0px;
