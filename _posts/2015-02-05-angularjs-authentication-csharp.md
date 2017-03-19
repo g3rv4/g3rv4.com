@@ -35,7 +35,7 @@ In order to handle the tokens on my side (and their expiration), I decided to us
 * redis has a really convenient expiration logic baked in (you can basically say "store this for N seconds")
 * redis is _fast_
 
-So, every time a log in attempt is made, I would just store the token on redis (using the token as key and the account id as value, setting its TTL to the time I want it to be valid for) and verifying if the token is valid would be just verify if it's in there, and the value would get me the account id. I also wanted to block accounts after N unsuccessful login attempts. The code I came up with is something like this (rewrote it a little to improve its readability, you can find the actual code [here](https://gitlab.gmc.uy/gervasio/twilioregistration/blob/35ec2c180f8f87c34fa814152831390a654b8662/TwilioRegistration.BusinessLogic/Managers/AccountsMgr.cs)):
+So, every time a log in attempt is made, I would just store the token on redis (using the token as key and the account id as value, setting its TTL to the time I want it to be valid for) and verifying if the token is valid would be just verify if it's in there, and the value would get me the account id. I also wanted to block accounts after N unsuccessful login attempts. The code I came up with is something like this (rewrote it a little to improve its readability, you can find the actual code [here](https://github.com/g3rv4/twilioregistration/blob/35ec2c180f8f87c34fa814152831390a654b8662/TwilioRegistration.BusinessLogic/Managers/AccountsMgr.cs)):
 
 {% highlight c# %}
 public static LogInResultDT LogIn(string email, string password)
@@ -98,7 +98,7 @@ The second approach is definitely the most user friendly... but I was deactivati
 
 The basic idea is: every time there's an unsuccessful log in attempt, increase the amount of failed attempts and set the TTL to the time I want to have the account deactivated... and before verifying if the account is valid, I can see how many log in attempts an email had. As the TTL takes care of removing that from redis, I don't have to do anything else.
 
-The code is also nicer looking, and that's a plus! ([here](https://gitlab.gmc.uy/gervasio/twilioregistration/blob/3f2fa6084107c655f96daff77dab84767b2da215/TwilioRegistration.BusinessLogic/Managers/AccountsMgr.cs) is the real version)
+The code is also nicer looking, and that's a plus! ([here](https://github.com/g3rv4/twilioregistration/blob/3f2fa6084107c655f96daff77dab84767b2da215/TwilioRegistration.BusinessLogic/Managers/AccountsMgr.cs) is the real version)
 
 {% highlight c# %}
 public static LogInResultDT LogIn(string email, string password)
@@ -185,10 +185,10 @@ That's when I included OAuth... If I can give a user a signed token, then I feel
 
 Adding OAuth to the solution was extremely easy following [this great article](http://bitoftech.net/2014/06/01/token-based-authentication-asp-net-web-api-2-owin-asp-net-identity/), but I did a few changes to make it fit my particular scenario:
 
-* I created [TWRAuthorizationServerProvider](https://gitlab.gmc.uy/gervasio/twilioregistration/blob/b6dfaf79cdd3d68ab0ba3edcfda443e778cc4ed7/TwilioRegistration.Frontend/Utils/TWRAuthorizationServerProvider.cs) a (deriving from `OAuthAuthorizationServerProvider`) using my `AccountsMgr` to handle the log in. It also adds the roles from the database and the permissions (so that I don't need to query the database, I just use the data on the token).
-* I created a [TokenValidationAttribute](https://gitlab.gmc.uy/gervasio/twilioregistration/blob/b6dfaf79cdd3d68ab0ba3edcfda443e778cc4ed7/TwilioRegistration.Frontend/Utils/TokenValidationAttribute.cs) authentication filter (implementing IAuthenticationFilter) that takes care of validating if a GUID is valid as a token and adding the accountId as a claim. As I also want to have some users act as other users (usually admins, or... me) I'm here also changing the claims if they need to be changed.
-* I created a [ClaimsAuthorizeAttribute](https://gitlab.gmc.uy/gervasio/twilioregistration/blob/b6dfaf79cdd3d68ab0ba3edcfda443e778cc4ed7/TwilioRegistration.Frontend/Utils/ClaimsAuthorizeAttribute.cs) to use on the controllers to validate that users have the appropriate claims on their tokens
-* I created a [BaseApiController](https://gitlab.gmc.uy/gervasio/twilioregistration/blob/b6dfaf79cdd3d68ab0ba3edcfda443e778cc4ed7/TwilioRegistration.Frontend/Controllers/BaseApiController.cs) that my WebApi controllers derive from that it just makes available the AccountId so that the controllers can use it freely.
+* I created [TWRAuthorizationServerProvider](https://github.com/g3rv4/twilioregistration/blob/b6dfaf79cdd3d68ab0ba3edcfda443e778cc4ed7/TwilioRegistration.Frontend/Utils/TWRAuthorizationServerProvider.cs) a (deriving from `OAuthAuthorizationServerProvider`) using my `AccountsMgr` to handle the log in. It also adds the roles from the database and the permissions (so that I don't need to query the database, I just use the data on the token).
+* I created a [TokenValidationAttribute](https://github.com/g3rv4/twilioregistration/blob/b6dfaf79cdd3d68ab0ba3edcfda443e778cc4ed7/TwilioRegistration.Frontend/Utils/TokenValidationAttribute.cs) authentication filter (implementing IAuthenticationFilter) that takes care of validating if a GUID is valid as a token and adding the accountId as a claim. As I also want to have some users act as other users (usually admins, or... me) I'm here also changing the claims if they need to be changed.
+* I created a [ClaimsAuthorizeAttribute](https://github.com/g3rv4/twilioregistration/blob/b6dfaf79cdd3d68ab0ba3edcfda443e778cc4ed7/TwilioRegistration.Frontend/Utils/ClaimsAuthorizeAttribute.cs) to use on the controllers to validate that users have the appropriate claims on their tokens
+* I created a [BaseApiController](https://github.com/g3rv4/twilioregistration/blob/b6dfaf79cdd3d68ab0ba3edcfda443e778cc4ed7/TwilioRegistration.Frontend/Controllers/BaseApiController.cs) that my WebApi controllers derive from that it just makes available the AccountId so that the controllers can use it freely.
 
 So now, a .NET controller with special claims requirements looks like this:
 {% highlight c# %}
@@ -344,6 +344,6 @@ And an angular service that uses it just does
 {% endhighlight %}
 The only database queries that are done on every request are those the managers need to do in order to perform their tasks... mission accomplished! (or so I think).
 
-You can download the code of the whole project from [here](https://gitlab.gmc.uy/gervasio/twilioregistration) (I'll move it to github once I get to the first alpha). It's my intention to eventually pack this as a separate thing so that I can use it on other projects without copying and pasting... but until I find the time to do it, it's going to live in there :)
+You can download the code of the whole project from [here](https://github.com/g3rv4/twilioregistration). It's my intention to eventually pack this as a separate thing so that I can use it on other projects without copying and pasting... but until I find the time to do it, it's going to live in there :)
 
 I'd love to hear your thoughts in the comments :) is it too much effort for something that that's pointless? after all, if an attacker got their hands on a token, they could do pretty much everything for 24 hours (except for changing the email / password, as the email will require email confirmation and the password will require knowledge of the old password).
