@@ -154,4 +154,4 @@ If you hate pasting so many lines (as I do), you can just do
 bash <(curl -sL https://gmc.uy/appify_with_notifications.sh)
 {% endhighlight %}
 
-And that should be it! you now have a python file on your environment that's a bundle, and on pycharm you'll be able to debug the notifications code and see the notifications pop up :) You can see [my project here](https://gitlab.gmc.uy/gervasio/notify_me_anything).
+And that should be it! you now have a python file on your environment that's a bundle, and on pycharm you'll be able to debug the notifications code and see the notifications pop up :) You can see [my project here](https://github.com/g3rv4/notify-me-anything).
