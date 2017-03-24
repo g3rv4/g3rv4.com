@@ -8,11 +8,12 @@ process = Proc.new {|post|
       return unless doc
 
       doc.css('img').each do |img|
-        img.name = 'amp-img'
         size = FastImage.size(File.expand_path File.dirname(__FILE__) + '/../' + img['src'])
         img['width'] = size[0]
         img['height'] = size[1]
       end
+
+      post.output = doc.to_s
     end
 }
 
