@@ -3,6 +3,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
+  {% if page.istagpage %}
+  <meta name="robots" content="noindex, noarchive">
+  {% endif %}
+
   <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} | {{ site.tagline }}{% endif %}</title>
   {% if page.description %}
     <meta name="Description" content="{{ page.description }}">
