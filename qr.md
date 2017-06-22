@@ -6,7 +6,7 @@ hide_from_sidebar: true
 
 Soy Gervasio, desarrollador full stack en [Stack Overflow](https://stackoverflow.com), una comunidad que recibe más de 50 millones de visitas por mes de desarrolladores que buscan aprender, compartir y avanzar en sus carreras. Trabajo en el equipo de [/jobs](https://stackoverflow.com/jobs), pensando todos los días cómo ayudar a más desarrolladores como yo a encontrar el trabajo de sus sueños (yo ya lo encontré, y fue... oh casualidad, usando [/jobs](https://stackoverflow.com/jobs)!).
 
-Estás en nerdear.la? El viernes a las 14:35 doy una charla... va a ser una introducción a Data Science (usando RStudio) para desarrolladores, intentando responder la pregunta ""
+Estás en nerdear.la? El viernes a las 14:35 doy una charla... va a ser una introducción a Data Science (usando RStudio) para desarrolladores, intentando responder la pregunta "Qué tags de Stack Overflow en español dan más reputación?"
 
 Querés la badge "[Not a Robot](https://stackoverflow.com/help/badges/6381/not-a-robot)" en Stack Overflow? sólo me la tenés que pedir :D querés coordinar para luego? mencioname en twitter, mi cuenta es @g3rv4
 
