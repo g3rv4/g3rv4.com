@@ -40,7 +40,7 @@ Requirements for this code to work:
 
 * Have PhantomJS installed (running `npm -g install phantomjs` if you have [nodejs](https://nodejs.org/en/) installed)
 * Have the [selenium](https://pypi.python.org/pypi/selenium) package (running `pip install selenium`)
-* If you're on a mac and installed nodejs with brew, you may need to do `sudo ln -s /usr/local/bin/node /usr/bin/node` (thanks to [this answer](http://stackoverflow.com/a/15699761/920295)!)
+* If you're on a mac and installed nodejs with brew, you may need to do `sudo ln -s /usr/local/bin/node /usr/bin/node` (thanks to [this answer](https://stackoverflow.com/a/15699761/920295)!)
 
 Here is the extremely simple code
 {% highlight python %}
@@ -99,4 +99,4 @@ refresh_token = data['refresh_token']
 {% endhighlight %}
 And if at any time you want to really see what PhantomJS is seeing, you can do `driver.save_screenshot('screen.png')` and it creates an image for you... soooo cool!
 
-Hope it helps someone! Oh, and I wouldn't have been able to figure out how to use PhantomJS via selenium without [this answer](http://stackoverflow.com/a/15699761/920295). If you're interested in this particular project, you can take a look and clone the repo [here](https://github.com/g3rv4/hours).
+Hope it helps someone! Oh, and I wouldn't have been able to figure out how to use PhantomJS via selenium without [this answer](https://stackoverflow.com/a/15699761/920295). If you're interested in this particular project, you can take a look and clone the repo [here](https://github.com/g3rv4/hours).

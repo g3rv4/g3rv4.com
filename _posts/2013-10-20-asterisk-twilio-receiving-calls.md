@@ -212,4 +212,4 @@ public ActionResult MyPhoneFinished(TwilioRequestVM request)
 
 **PS:** I wish I had a cool number like the one in the examples
 
-**PS2:** Inspired by [my question and answer at Stack Overflow](http://stackoverflow.com/q/19437548/920295)
+**PS2:** Inspired by [my question and answer at Stack Overflow](https://stackoverflow.com/q/19437548/920295)

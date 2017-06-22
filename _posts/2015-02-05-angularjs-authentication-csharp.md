@@ -27,7 +27,7 @@ Coming from traditional MVC applications, I really like the idea of [sliding exp
 
 While I was at it, my first decision was how to hash my passwords... fortunately, I found [this awesome article about it](https://crackstation.net/hashing-security.htm) and it even included C# code, so that's what I'm using.
 
-Then, I got to think on my authentication code... my idea is to give every authenticated user a token with an expiration... and every time they use it, have that token change its expiration (the idea isn't to change the expiration only if half the time has already passed... I don't really see the value in it, but we'll see what the [good folks at Stack Exchange have to say about it](http://security.stackexchange.com/q/80961/41022).
+Then, I got to think on my authentication code... my idea is to give every authenticated user a token with an expiration... and every time they use it, have that token change its expiration (the idea isn't to change the expiration only if half the time has already passed... I don't really see the value in it, but we'll see what the [good folks at Stack Exchange have to say about it](https://security.stackexchange.com/q/80961/41022).
 
 In order to handle the tokens on my side (and their expiration), I decided to use [redis](https://redis.io/). The reasoning behind that is:
 

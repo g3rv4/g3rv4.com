@@ -29,12 +29,12 @@ I finally figured it out, and as it wasn't straightforward (much less pythonic) 
 paramiko can't be easily installed on windows because it uses pycrypto... which is a C library that deals with the encryption part.
 
 ## The first approach
-Their website has a link to a bunch of precompiled packages... so I gave that a try first. The right way of installing a package is [by using easy_install](http://stackoverflow.com/a/5442340/920295). It did the set up, but when I tried to import the module, it failed with the message `ImportError: DLL load failed: %1 is not a valid Win32 application.` when its code imported `winrandom`.
+Their website has a link to a bunch of precompiled packages... so I gave that a try first. The right way of installing a package is [by using easy_install](https://stackoverflow.com/a/5442340/920295). It did the set up, but when I tried to import the module, it failed with the message `ImportError: DLL load failed: %1 is not a valid Win32 application.` when its code imported `winrandom`.
 
 On their site they also say that on some 64-bits systems `winrandom` just fails, and the only option is to manually compile it. Oh, what a luck.
 
 ## Compiling it
-Ok, if that's what it takes... let's try it out. Even if I have Visual Studio, I'd like to keep it out of the equation. [This answer](http://stackoverflow.com/a/21291923/920295) pointed me in the right direction, I had to do it with MinGW.
+Ok, if that's what it takes... let's try it out. Even if I have Visual Studio, I'd like to keep it out of the equation. [This answer](https://stackoverflow.com/a/21291923/920295) pointed me in the right direction, I had to do it with MinGW.
 
 I had never used it before, but it's extremely straightforward. On the Installation Manager, select the packages
 
@@ -56,7 +56,7 @@ compiler=mingw32
 
 That will tell python to use mingw32 to compile whatever it needs to compile... and we're one step closer!
 
-Unfortunately, doing `pip install pycrypto` also throws all types of errors again... at least, they're different :) The message is always `error: unknown type name 'off64_t'`... which I didn't have a clue of what it meant... but fortunately I found [this answer](http://stackoverflow.com/a/20090954/920295) on Stack Overflow. As he said, it's brutal... time to modify the `sys/types.h` file :P
+Unfortunately, doing `pip install pycrypto` also throws all types of errors again... at least, they're different :) The message is always `error: unknown type name 'off64_t'`... which I didn't have a clue of what it meant... but fortunately I found [this answer](https://stackoverflow.com/a/20090954/920295) on Stack Overflow. As he said, it's brutal... time to modify the `sys/types.h` file :P
 
 Let me save you a few minutes, the same thing happens with the `off_t` type. Open the file `C:\MinGW\include\sys\types.h` and search for `off_t`. You'll find something like
 {% highlight c %}

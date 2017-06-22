@@ -20,11 +20,4 @@ layout: null
       <priority>{% if post.priority %}{{post.priority}}{% else %}0.3{% endif %}</priority>
    </url>
    {% endfor %}
-   {% for tag in site.data.tags %}
-   <url>
-      <loc>{{site.url}}{{tag.tag | datapage_url: '/tags' | remove: '.html'}}</loc>
-      <changefreq>daily</changefreq>
-      <priority>0.1</priority>
-   </url>
-   {% endfor %}
 </urlset>

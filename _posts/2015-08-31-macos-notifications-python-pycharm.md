@@ -24,14 +24,14 @@ I built a small python app that notifies me about when my local currency changes
 
 I wanted to create an application that notifies me of interesting things through different means (it could be an SMS, an email or... Mac OS neat notification system).
 
-I found this [Stack Overflow answer](http://stackoverflow.com/a/21534503/920295) that explained how to do that from Python, and even letting you add an action button (something like "View"). Here's that answer with a minor tweak on the init code (as the original way doesn't work anymore)
+I found this [Stack Overflow answer](https://stackoverflow.com/a/21534503/920295) that explained how to do that from Python, and even letting you add an action button (something like "View"). Here's that answer with a minor tweak on the init code (as the original way doesn't work anymore)
 
 {% highlight python %}
 import Foundation
 import objc
 
 class MountainLionNotification(Foundation.NSObject):
-    # Based on http://stackoverflow.com/questions/12202983/working-with-mountain-lions-notification-center-using-pyobjc
+    # Based on https://stackoverflow.com/questions/12202983/working-with-mountain-lions-notification-center-using-pyobjc
 
     def init(self):
         self = objc.super(MountainLionNotification, self).init()
