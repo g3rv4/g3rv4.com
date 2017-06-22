@@ -18,7 +18,6 @@ First, make sure you check out the posts from my amazing coworkers talking about
 * [Dave's first year as a data scientist at Stack](http://varianceexplained.org/r/year_data_scientist/)
 * [Jon's first six weeks](http://www.jonhmchan.com/blog/2014/1/16/my-first-six-weeks-working-at-stack-overflow)
 * [Jon's first year](http://www.jonhmchan.com/blog/2014/12/2/my-first-twelve-months-working-at-stack-overflow)
-* [Jisoo's apprentice experience](http://jisooshin.com/summer-at-stack/) (after her internship finished, she became a full-stack dev at Stack)
 * [Matt Jibson's experience](https://mattjibson.com/blog/2012/04/28/how-i-got-a-job-at-stack-overflow/) (he left Stack before I started)
 * Nestor's amazing story (written in a beautiful Spanish from Spain with cool pictures)
   * [Part I](http://konamiman.blogspot.com/2016/07/un-mallorquin-en-la-corte-del-rey.html)

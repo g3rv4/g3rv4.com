@@ -13,11 +13,6 @@ layout: null
       <changefreq>daily</changefreq>
       <priority>0.95</priority>
    </url>
-   <url>
-      <loc>{{site.url}}{% link found-a-mistake.md %}</loc>
-      <changefreq>daily</changefreq>
-      <priority>0.01</priority>
-   </url>
    {% for post in site.posts %}
    <url>
       <loc>{{site.url}}{{post.url}}</loc>
