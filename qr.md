@@ -17,6 +17,7 @@ Acá van algunos temas que me interesan (que no quiere decir que sepa mucho de e
 * Data Science
 * python (ahora me puse como objetivo no tocar python, y hacer todos mis pet projects en golang)
 * golang, gogs, drone.io
+* Jekyll y sitios estáticos *muy rápidos* (como este)
 * Asterisk
 * Stack Overflow
 * Librerías javascript que seguramente no conozco (en stack somos hardcore jquery users)
