@@ -45,3 +45,6 @@ page_gen:
 gems:
   - jekyll-paginate
 #prod:  - octopress-minify-html
+
+exclude:
+  - "*.sh"
