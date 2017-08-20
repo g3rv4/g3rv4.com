@@ -32,13 +32,6 @@ extlinks:
 #prod:  check_links: true
   check_exclude: ['twitter.com']
 
-page_gen:
-  - data: tags
-    template: tag
-    name: tag
-    dir: tags
-    dirs: true
-
 #prod:sass:
 #prod:  style: compressed
 
