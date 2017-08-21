@@ -89,12 +89,14 @@ You can call this with `build_article('2017-08-20-some-random-post')` and it wou
 From the previous step, you have an `_includes/htmlwidgets/some-random-post.html` file that has contents similar to this:
 
 ```
+{% raw %}
 <script src="{{ "/htmlwidgets_deps/htmlwidgets-0.9/htmlwidgets.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/htmlwidgets_deps/jquery-1.12.4/jquery.min.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/htmlwidgets_deps/datatables-binding-0.2/datatables.js" | prepend: site.baseurl }}"></script>
 <link href="{{ "/htmlwidgets_deps/dt-core-1.10.12/css/jquery.dataTables.min.css" | prepend: site.baseurl }}" rel="stylesheet" />
 <link href="{{ "/htmlwidgets_deps/dt-core-1.10.12/css/jquery.dataTables.extra.css" | prepend: site.baseurl }}" rel="stylesheet" />
 <script src="{{ "/htmlwidgets_deps/dt-core-1.10.12/js/jquery.dataTables.min.js" | prepend: site.baseurl }}"></script>
+{% endraw %}
 ```
 
 This is something you need to ensure is included on your article's html... Here's a clean way of doing so.
@@ -130,18 +132,18 @@ On your `_includes/head.html`, before `</head>`, add
 
 ```
 {% raw %}
-<!-- add htmlwidget js files -->
+<!-- add htmlwidgets files -->
 {% if page.htmlwidgets %}
   {% assign dep_file = page.url | split: '/' | last | prepend : 'htmlwidgets/' | append : '.html' | replace: '.Rmd', '' %}
   {% include {{dep_file}} %}
 {% endif %}
-<!-- end htmlwidget js files -->
+<!-- end htmlwidgets files -->
 {% endraw %}
 ```
 
 The first and last lines are comment (they provide no real value other than making it easy for you to understand the generated html, you're free to delete them if you want to).
 
-`{% raw %}{% if page.htmlwidget %}{% endraw %}` is Jekyll code for "if the `htmlwidgets` element in the front matter of the article is `true`"... and here's where we're using that. Why not doing this for every article? because we won't need included javascript/css files on those.
+`{% raw %}{% if page.htmlwidgets %}{% endraw %}` is Jekyll code for "if the `htmlwidgets` element in the front matter of the article is `true`"... and here's where we're using that. Why not doing this for every article? because we won't need included javascript/css files on those.
 
 The next line, assigns the route to the included file (trust me) to the variable `dep_file`. And then, it just includes it. That's it!
 
