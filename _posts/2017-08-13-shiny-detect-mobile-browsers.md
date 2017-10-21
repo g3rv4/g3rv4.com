@@ -18,7 +18,7 @@ She wouldn't get a user agent at all. Of course, I forgot to pass the header on 
 
 # How do we do it?
 
-Aaanyway, then thanks to [Dean Attali](http://deanattali.com)'s suggestion, we started looking into how to actually do that via Javascript. After all, a shiny app is just a web app.
+Aaanyway, then thanks to [Dean Attali](https://twitter.com/daattali)'s suggestion, we started looking into how to actually do that via Javascript. After all, a shiny app is just a web app.
 
 After a couple failed attempts with [shinyjs](https://github.com/daattali/shinyjs) (it requested to install V8 and it was heavy heavy heavy) I discovered [input bindings](https://shiny.rstudio.com/articles/building-inputs.html). They're just a clean way for you to implement your own shiny elements, and trigger whatever code you want on Javascript.
 
