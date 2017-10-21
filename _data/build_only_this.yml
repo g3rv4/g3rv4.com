@@ -1,0 +1,5 @@
+  pages:
+    - index.html
+    - about.md
+  posts:
+    - 2017-01-01-I-got-a-job-at-stackoverflow

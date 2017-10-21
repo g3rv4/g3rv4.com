@@ -32,6 +32,9 @@ extlinks:
 #prod:  check_links: true
   check_exclude: ['twitter.com']
 
+build_only_this:
+  enabled: true #local
+
 #prod:sass:
 #prod:  style: compressed
 
