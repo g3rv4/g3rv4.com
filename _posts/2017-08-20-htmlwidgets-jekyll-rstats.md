@@ -187,4 +187,4 @@ local({
 
 You can see it's basically the same thing, but instead of defining a function it evaluates an expression... and it receives the source and the destination as command arguments.
 
-There probably are some weird stuff going on in this with the `baseurl`, but I'm not particularly proud of how I fixed that in [d4tagirl's](https://d4tagirl.com/) or [maëlle's](http://www.masalmon.eu/) blogs... so if you fix it for your blog (or want me to help figure out what's missing), feel free to mention me on twitter :)
+There probably are some weird stuff going on in this with the `baseurl`, but I'm not particularly proud of how I fixed that in [d4tagirl's](https://d4tagirl.com/) or [maëlle's](http://masalmon.eu/) blogs... so if you fix it for your blog (or want me to help figure out what's missing), feel free to mention me on twitter :)
