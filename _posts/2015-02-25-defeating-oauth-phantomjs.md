@@ -39,7 +39,7 @@ I originally set it so that my redirect url was `http://127.0.0.1:1234` but that
 Requirements for this code to work:
 
 * Have PhantomJS installed (running `npm -g install phantomjs` if you have [nodejs](https://nodejs.org/en/) installed)
-* Have the [selenium](https://pypi.python.org/pypi/selenium) package (running `pip install selenium`)
+* Have the [selenium](https://pypi.org/project/selenium/) package (running `pip install selenium`)
 * If you're on a mac and installed nodejs with brew, you may need to do `sudo ln -s /usr/local/bin/node /usr/bin/node` (thanks to [this answer](https://stackoverflow.com/a/15699761/920295)!)
 
 Here is the extremely simple code

@@ -22,7 +22,7 @@ My goal with this blog was just sharing the interesting (technological) problems
 
 I don't want to lose sight of the original blog goal though, and one of the requirements Seth had was getting the sip users from a mysql database, where he would update the passwords whenever the users changed them. As I think that's worth sharing, here it goes...
 
-After reading about how to do that, the first thing I found was [Asterisk Realtime Architecture](https://www.voip-info.org/wiki/view/Asterisk+RealTime) and that looked really promising. Despite having to use their table structure, the main issue is that (from that link)
+After reading about how to do that, the first thing I found was [Asterisk Realtime Architecture](https://www.voip-info.org/asterisk-realtime) and that looked really promising. Despite having to use their table structure, the main issue is that (from that link)
 > The **database peers/users** are not kept in memory. These are only loaded when we have a call and then deleted, so **there's no support for NAT keep-alives (qualify=) or voicemail indications** for these peers.
 
 Which is definitely not acceptable if you have mobile clients.
@@ -35,6 +35,6 @@ asterisk -r -x "dialplan reload"
 
 This works just fine, it doesn't disconnect already registered peers and, as the cron does it only if it detects changes, it should be the same as doing it manually.
 
-However, it feels like cheating... specially when there's Asterisk Realtime Architecture to load the peers and [Asterisk RealTime Extensions](https://www.voip-info.org/wiki/view/Asterisk+RealTime+Extensions) to load the extensions from a db  (why would they build it if you can do it easily with a cron?).
+However, it feels like cheating... specially when there's Asterisk Realtime Architecture to load the peers and [Asterisk RealTime Extensions](https://www.voip-info.org/asterisk-realtime-extensions) to load the extensions from a db  (why would they build it if you can do it easily with a cron?).
 
 If you find issues with this approach (and feel like sharing) please add a comment.

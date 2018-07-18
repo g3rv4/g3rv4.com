@@ -18,7 +18,7 @@ Hello world! It's been a while! but I'm trying to get back at blogging :)
 
 I've been reading tweets about how great Docker is but I've never had the chance to try it out... until... I decided it was my next adventure... and boy am I enjoying it!
 
-I started my Docker journey by buying [The Docker Book](https://www.dockerbook.com/), it's awesome... I read it in two days just because I couldn't stop.
+I started my Docker journey by buying [The Docker Book](https://dockerbook.com/), it's awesome... I read it in two days just because I couldn't stop.
 
 Then, I started thinking about how I would dockerize all the services I run on my servers... I started a migration a few months ago and I've never got the nerve to complete it... so getting to try Docker to actually do something useful (and finish that migration) sounds like a great plan.
 
