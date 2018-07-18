@@ -17,7 +17,7 @@ At Stack Overflow, we have a biweekly session with our Data Scientist (hi [Julia
 ## But... what the heck is a random forest?
 Of course, [wikipedia has the answer](https://en.wikipedia.org/wiki/Random_forest). It's "just" a collection of [decision trees](https://en.wikipedia.org/wiki/Decision_tree) carefully chosen to predict something. If you want to predict the math grade of a student based on their age, their previous grade and their height, each tree would use those variables to come up with a result. Then, the prediction of the forest would be the average for the results chosen by those trees.
 
-And that, if you're good at choosing the underlying trees, this approach works very well for some problems.
+And, if you're good at choosing the underlying trees, this approach works very well for some problems.
 
 ## What is the problem then?
 After we had our random forest working (we used some nice packages in R to build them)... they mentioned that at that time, we didn't really have a way of productionizing it. Our data team was looking into [running R in SQL Server](https://docs.microsoft.com/en-us/sql/advanced-analytics/r/sql-server-r-services?view=sql-server-2017), but I figured that if a random forest is just a collection of decision trees... then it shouldn't be complicated to run them in c#.
@@ -85,7 +85,7 @@ Aaand, just doing `double predictedValue = randomForest.Predict(row);` will get 
 ## What if I wanted to see the probability of each option?
 If you're using a `ClassificationRandomForest`, you can get the probability of each outcome (this is actually what the first user asked for).
 
-I didn't really know what it was, so I looked it up and it's just the percentage of random forest that chose a value.
+I didn't really know what it was, so I looked it up and it's just the percentage of decision trees that chose a value.
 
 If you're predicting "is this room occupied?" based on humidity, temperature, CO2, etc. the possible answers are "yes" and "no". If we have a model that has 100 trees, and for a value of humidity, temperature and CO2 45 trees say "yes" and 55 trees say "no", then the probability of "yes" is 0.45.
 
