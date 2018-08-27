@@ -28,6 +28,10 @@ With that url configured, when you write `hangout something` it sends to the cha
 
 This is... how our chat (bonfire) works on our internal rooms. And I like that behavior better than the Slack ones.
 
+## Markdown links
+
+If you write `[here's a link](https://gmc.uy)`, it shows it as a link :)
+
 ## Move reactions to the right
 
 The reactions are a great way to interact without writing... but... they take vertical space, making me need to scroll to see what people have been talking about.
