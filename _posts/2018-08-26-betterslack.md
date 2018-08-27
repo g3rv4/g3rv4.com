@@ -8,7 +8,7 @@ I built a Chrome extension that makes Slack even better :) It's called [BetterSl
 I'm thinking of ways to productionize the app tweaks, but in the mean time: meet BetterSlack!
 <!--more-->
 
-There are 2 or 3 things about Slack that I think can be made better. That's why I built [BetterSlack](https://chrome.google.com/webstore/detail/betterslack/mgicdolhkaeefgmbhlohfjoafacijbfh). It's a Chrome extension that injects javascript into your Slack environments to add (or remove) features. You can find [it source code here](https://github.com/g3rv4/BetterSlack).
+There are 2 or 3 things about Slack that I think can be made better. That's why I built [BetterSlack](https://chrome.google.com/webstore/detail/betterslack/mgicdolhkaeefgmbhlohfjoafacijbfh). It's a Chrome extension that injects javascript into your Slack environments to add (or remove) features. You can find [its source code here](https://github.com/g3rv4/BetterSlack) or watch my [3 minutes demo](https://www.youtube.com/watch?v=cXDXX9eYQPs).
 
 # What does it do? (and why)
 
@@ -31,6 +31,10 @@ This is... how our chat (bonfire) works on our internal rooms. And I like that b
 ## Markdown links
 
 If you write `[here's a link](https://gmc.uy)`, it shows it as a link :)
+
+The nice part? it shows it as a link for everybody, not only those who have the extension installed.
+
+**Known issue:** If you try to edit a message with a link, the link is removed. I'll work on it, it shouldn't be hard to fix.
 
 ## Move reactions to the right
 
