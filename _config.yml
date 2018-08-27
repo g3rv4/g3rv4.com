@@ -23,7 +23,7 @@ stack_url:        https://stackoverflow.com/users/920295/g3rv4
 author_image:     public/images/g3rv4.jpg
 logo:             public/images/g3rv4.jpg
 
-paginate:         30
+paginate:         300
 excerpt_separator: <!--more-->
 
 extlinks:
