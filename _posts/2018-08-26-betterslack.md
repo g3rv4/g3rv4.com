@@ -34,8 +34,6 @@ If you write `[here's a link](https://gmc.uy)`, it shows it as a link :)
 
 The nice part? it shows it as a link for everybody, not only those who have the extension installed.
 
-**Known issue:** If you try to edit a message with a link, the link is removed. I'll work on it, it shouldn't be hard to fix.
-
 ## Move reactions to the right
 
 The reactions are a great way to interact without writing... but... they take vertical space, making me need to scroll to see what people have been talking about.
@@ -51,6 +49,10 @@ When talking on a thread, this feature makes the `Also post to #channel` checkbo
 ## Disable Google Drive previews
 
 I couldn't find a way of doing this in the preferences (I already have all the checkboxes on **Inline Media & Links** unchecked). So this feature disables the Google Drive previews.
+
+## Disable Url previews
+
+Even if I have `Show text previews of linked websites` disabled, it's still showing them to me. So I added this to enable its absolute removal.
 
 ## Hide status emojis
 
