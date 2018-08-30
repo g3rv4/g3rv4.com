@@ -52,4 +52,4 @@ It looked like a paradise for developers. I was applying for jobs for the first 
 When I say that calling it my dream job feels like an understatement, it's just because so far it's better than any dream I've ever had. I reviewed this page almost a year after joining Stack and I'm still in awe about it.
 
 ## So, that's my story
-Oh, and I run. I love running, but that's not probably why you're here :) nice to meet you and [mention me on twitter](https://twitter.com/intent/tweet?user_id=77212546) if you have any comments.
+Oh, and I run. I love running, but that's not probably why you're here :) nice to meet you and [mention me on twitter](https://twitter.com/g3rv4) if you have any comments.
