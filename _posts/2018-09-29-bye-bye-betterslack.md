@@ -5,10 +5,10 @@ date: "2018-08-29 01:00:00 -0300"
 ---
 Less than 2 days after announcing BetterSlack, I got an email from somebody on Slack's Legal team informing me that the extension was in violation of their Acceptable Use Policy.
 
-Injecting javascript into their website is a no-no according to them. So I'm unshipping it.
+Injecting javascript into their website is a no-no according to them. So I unshipped it.
 
 <!--more-->
-A couple days ago, I [announced BetterSlack]({% post_url 2018-08-26-betterslack %}). Today (August 30th) at 4pm ET I'm unshipping it.
+On August 26th 2018, I [announced BetterSlack]({% post_url 2018-08-26-betterslack %}). On August 30th, [I unpublished it from the chrome web store](https://twitter.com/g3rv4/status/1035256960038449152).
 
 ![silver lining 1: I get to use this image](/public/images/unship.gif)
 
@@ -62,7 +62,7 @@ As I don't want problems, I'll take it down. Sad, and even more convinced that S
 
 1. I got to use the unship gif that I got in love with when [Stack Overflow Teams unshipped](https://meta.stackoverflow.com/q/330427/920295) (not to be confused with [Stack Overflow for Teams](https://stackoverflow.com/teams), which is alive and amazing)
 2. The encouragement that I received is amazing. People I admire a lot. People I don't know. Thank you all, it really made a difference on a moment that I needed it.
-3. I got to be in the front page of HN! A LOT! where I received [lots of support](https://news.ycombinator.com/item?id=17869249)
+3. I got to be in the front page of HN! A LOT! [Check the front page stories from that day :)](https://news.ycombinator.com/front?day=2018-08-29). I got 43k unique visitors in 24 hours that downloaded 74GB and it all worked alright. Thanks Cloudflare, you rock.
 4. The project already has forks. There's no stopping it.
 5. I'm going to continue improving the extension until I don't need to use Slack anymore. I have more ideas... like threaded conversations, where you hover on the reply and it highlights the other messages in the same convo. I would have loved to ship it.
 6. I'm pretty sure that by now, somebody at Slack (in addition to their Legal Team) is aware of the situation. I'm hopeful we can work something out once I take the extension down.

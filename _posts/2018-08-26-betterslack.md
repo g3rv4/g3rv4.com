@@ -3,12 +3,17 @@ layout: post
 title: "Making Slack better with BetterSlack"
 date: "2018-08-26 19:00:00 -0300"
 ---
-I built a Chrome extension that makes Slack even better :) It's called [BetterSlack](https://chrome.google.com/webstore/detail/betterslack/mgicdolhkaeefgmbhlohfjoafacijbfh) and while today it's only a Chrome extension, the same code actually works in its app (since it's an Electron app).
+I built a Chrome extension that makes Slack even better :) It was called BetterSlack and it got unpublished following Slack's Legal Team's request. On this blog post I announced it.
 
-I'm thinking of ways to productionize the app tweaks, but in the mean time: meet BetterSlack!
 <!--more-->
 
-There are 2 or 3 things about Slack that I think can be made better. That's why I built [BetterSlack](https://chrome.google.com/webstore/detail/betterslack/mgicdolhkaeefgmbhlohfjoafacijbfh). It's a Chrome extension that injects javascript into your Slack environments to add (or remove) features. You can find [its source code here](https://github.com/g3rv4/BetterSlack) or watch my [3 minutes demo](https://www.youtube.com/watch?v=cXDXX9eYQPs).
+---
+
+**UPDATE:** The extension was unpublished from the chrome web store following [Slack's Legal Team request]({% post_url 2018-09-29-bye-bye-betterslack %}). I'm continuing its development [on GitHub](https://github.com/g3rv4/BetterSlack) while they don't ask me to stop it.
+
+---
+
+There are 2 or 3 things about Slack that I think can be made better. That's why I built BetterSlack. It's a Chrome extension that injects javascript into your Slack environments to add (or remove) features. You can find [its source code here](https://github.com/g3rv4/BetterSlack) or watch my [3 minutes demo](https://www.youtube.com/watch?v=cXDXX9eYQPs).
 
 # What does it do? (and why)
 
