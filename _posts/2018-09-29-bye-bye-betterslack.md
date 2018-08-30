@@ -8,7 +8,7 @@ Less than 2 days after announcing BetterSlack, I got an email from somebody on S
 Injecting javascript into their website is a no-no according to them. So I'm unshipping it.
 
 <!--more-->
-A couple days ago, I [announced BetterSlack]({% post_url 2018-08-26-betterslack %}). Tomorrow (August 30th) at 4pm ET I'm unshipping it.
+A couple days ago, I [announced BetterSlack]({% post_url 2018-08-26-betterslack %}). Today (August 30th) at 4pm ET I'm unshipping it.
 
 ![silver lining 1: I get to use this image](/public/images/unship.gif)
 
@@ -50,7 +50,7 @@ BetterSlack makes me like Slack more (or... full disclosure: dislike Slack less)
 
 They missed the opportunity of engaging with the community *that actually wants to make their product better*. I'm still excited about adding more features to BetterSlack (taking a couple ideas from other systems... like bonfire). The dream goal was that maybe... maybe... Slack could incorporate some of that into their product? in an ideal world, BetterSlack wouldn't exist! but not because of their Legal Team, but because of their Product Team.
 
-To show what I mean about the missed opportunity, check how [Jon Ericson provided feedback on a user's app that was putting Stack Overflow in the menu bar](https://stackapps.com/a/8016/48463). Check how [GitHub engaged with the community of RefinedGithub](https://github.com/sindresorhus/refined-github/issues/1469) (which is an extension that injects javascript on GitHub's site... and they're ok with). GitHub's case is **exactly the same as this one**... isn't it telling that they're not concerned about how they affect their user's privacy and security?
+To show what I mean about the missed opportunity, check how [Jon Ericson provided feedback on a user's app that was putting Stack Overflow in the menu bar](https://stackapps.com/a/8016/48463). Check how [GitHub engaged with the community of RefinedGithub](https://github.com/sindresorhus/refined-github/issues/1469) (which is an extension that injects javascript on GitHub's site... and they're ok with). GitHub's case is **exactly the same as this one**... isn't it telling that they're not concerned about how they affect their user's privacy and security? Or Atlassian... who... [are providing an extension author the heads up on changes so that they can be prepared for them](https://bitbucket.org/site/master/issues/15474/add-a-create-a-pull-request-button-on-the)?
 
 What is it going to happen? I'm going to continue working on it, but I won't be able to distribute it... what worries me is that if anybody *actually wants to steal users' credentials* there's now an easy way. Just edit my extension, do whatever you want and you'll get people installing it.
 
@@ -62,9 +62,10 @@ As I don't want problems, I'll take it down. Sad, and even more convinced that S
 
 1. I got to use the unship gif that I got in love with when [Stack Overflow Teams unshipped](https://meta.stackoverflow.com/q/330427/920295) (not to be confused with [Stack Overflow for Teams](https://stackoverflow.com/teams), which is alive and amazing)
 2. The encouragement that I received is amazing. People I admire a lot. People I don't know. Thank you all, it really made a difference on a moment that I needed it.
-3. I got to be in the front page of HN two days in a row! (the second time for minutes, but hey... I made it there!)
+3. I got to be in the front page of HN! A LOT! where I received [lots of support](https://news.ycombinator.com/item?id=17869249)
 4. The project already has forks. There's no stopping it.
 5. I'm going to continue improving the extension until I don't need to use Slack anymore. I have more ideas... like threaded conversations, where you hover on the reply and it highlights the other messages in the same convo. I would have loved to ship it.
+6. I'm pretty sure that by now, somebody at Slack (in addition to their Legal Team) is aware of the situation. I'm hopeful we can work something out once I take the extension down.
 
 # Do you want to help?
 
