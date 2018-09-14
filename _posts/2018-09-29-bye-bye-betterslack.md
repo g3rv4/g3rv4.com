@@ -8,6 +8,13 @@ Less than 2 days after announcing BetterSlack, I got an email from somebody on S
 Injecting javascript into their website is a no-no according to them. So I unshipped it.
 
 <!--more-->
+
+**UPDATE Sept 14th 2018:** After talks with our friends from Slack and a rename... Taut (fka BetterSlack) is now live back!!! You can find it both for Chrome and Firefox. See more details at [taut.rocks](https://taut.rocks).
+
+I feel like I need an un-unshipping gif now.
+
+---
+
 On August 26th 2018, I [announced BetterSlack]({% post_url 2018-08-26-betterslack %}). On August 30th, [I unpublished it from the chrome web store](https://twitter.com/g3rv4/status/1035256960038449152).
 
 ![silver lining 1: I get to use this image](/public/images/unship.gif)
