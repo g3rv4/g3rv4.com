@@ -9,7 +9,7 @@ Injecting javascript into their website is a no-no according to them. So I unshi
 
 <!--more-->
 
-**UPDATE Sept 14th 2018:** After talks with our friends from Slack and a rename... Taut (fka BetterSlack) is now live back!!! You can find it both for Chrome and Firefox. See more details at [taut.rocks](https://taut.rocks).
+**UPDATE Sept 14th 2018:** After talks with folks from Slack and a rename... Taut (fka BetterSlack) is now live back!!! You can find it both for Chrome and Firefox. See more details at [taut.rocks](https://taut.rocks).
 
 I feel like I need an un-unshipping gif now.
 
