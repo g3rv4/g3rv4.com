@@ -20,7 +20,7 @@ There's a significant group of data scientists that work with R, blog with R and
 
 But... the whole experience becomes frustrating when they want to use a javascript powered library. On my wife's [4th blog post](https://d4tagirl.com/2017/05/how-to-fetch-twitter-users-with-r) she wanted to use a `DT::datatable` to show a long table in an friendly way. All it does is adding some javascript so that you can do searches and pagination... but she hit a dead end when trying to set it up by herself.
 
-I then gave it a try, and after some time copy-pasting bits that I didn't understand, I made it work. Then, by using the already proven copy-this-here-and-then-that-there method, we also set it up on [Maëlle's blog](http://masalmon.eu/).
+I then gave it a try, and after some time copy-pasting bits that I didn't understand, I made it work. Then, by using the already proven copy-this-here-and-then-that-there method, we also set it up on [Maëlle's blog](https://masalmon.eu/).
 
 Last week, [Kasia asked for help on twitter](https://twitter.com/KKulma/status/896497101772734465)... and what could I do if not helping out? she uses a different method for building her blog, so this time, I had to _actually understand_ what I was doing.
 
@@ -187,4 +187,4 @@ local({
 
 You can see it's basically the same thing, but instead of defining a function it evaluates an expression... and it receives the source and the destination as command arguments.
 
-There probably are some weird stuff going on in this with the `baseurl`, but I'm not particularly proud of how I fixed that in [d4tagirl's](https://d4tagirl.com/) or [maëlle's](http://masalmon.eu/) blogs... so if you fix it for your blog (or want me to help figure out what's missing), feel free to mention me on twitter :)
+There probably are some weird stuff going on in this with the `baseurl`, but I'm not particularly proud of how I fixed that in [d4tagirl's](https://d4tagirl.com/) or [maëlle's](https://masalmon.eu/) blogs... so if you fix it for your blog (or want me to help figure out what's missing), feel free to mention me on twitter :)
