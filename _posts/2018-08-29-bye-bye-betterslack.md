@@ -5,7 +5,7 @@ date: "2018-08-29 01:00:00 -0300"
 ---
 Less than 2 days after announcing BetterSlack, I got an email from somebody on Slack's Legal team informing me that the extension was in violation of their Acceptable Use Policy.
 
-Injecting javascript into their website is a no-no according to them. So I unshipped it.
+Injecting javascript into their website is a no-no according to them. So I unshipped it (spoiler alert: we worked it out and it's back under a new name).
 
 <!--more-->
 

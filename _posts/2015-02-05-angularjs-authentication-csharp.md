@@ -23,7 +23,7 @@ Working on the [twilio registration project I want to show on the Signal conf]({
 
 I'm new with AngularJS, so I'm dealing with the same stuff everyone has dealt with on their beginnings. The first thing on my way is authentication... What I've read around suggested generating an OAuth bearer token and having it expire in 24 hours (or in any time you feel comfortable with and implementing the refresh mechanism).
 
-Coming from traditional MVC applications, I really like the idea of [sliding expiration](https://docs.microsoft.com/en-us/dotnet/api/system.web.configuration.formsauthenticationconfiguration.slidingexpiration)... giving away a long lived token feels... dirty. I couldn't find anything baked in that took care of this, so I started coding my own algorithm.
+Coming from traditional MVC applications, I really like the idea of [sliding expiration](https://docs.microsoft.com/en-us/dotnet/api/system.web.configuration.formsauthenticationconfiguration.slidingexpiration?view=netframework-4.7.2)... giving away a long lived token feels... dirty. I couldn't find anything baked in that took care of this, so I started coding my own algorithm.
 
 While I was at it, my first decision was how to hash my passwords... fortunately, I found [this awesome article about it](https://crackstation.net/hashing-security.htm) and it even included C# code, so that's what I'm using.
 

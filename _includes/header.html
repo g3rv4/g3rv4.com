@@ -2,7 +2,7 @@
   <div class="logo-placeholder"></div>
   <div class="page-links">
     <a class="page-link" href="{{ site.baseurl }}">Home</a>
-    {% assign pages_list = site.pages %}
+    {% assign pages_list = site.pages | sort:"order" %}
     {% for node in pages_list %}
       {% if node.title != null and node.hide_from_sidebar != true %}
         {% if node.layout == "page" %}

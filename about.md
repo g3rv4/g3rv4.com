@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About Me
+order: 2
 ---
 
 Hi there! I'm Gervasio and this is my blog.
