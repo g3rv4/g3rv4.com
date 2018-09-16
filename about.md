@@ -4,7 +4,7 @@ title: About Me
 order: 2
 ---
 
-Hi there! I'm Gervasio and this is my blog.
+Hi there! I'm Gervasio and this is my blog. I'm a Senior Software Developer at Stack Overflow, working on the Talent team.
 
 Here's where I try to tell you who I am. I kind of suck at that, so instead of trying to answer who I am, I'll try to share a couple things that I think help explain why I get to spend my working hours doing something I profoundly love.
 

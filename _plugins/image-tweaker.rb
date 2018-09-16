@@ -9,8 +9,17 @@ process = Proc.new {|post|
 
       doc.css('img').each do |img|
         size = FastImage.size(File.expand_path File.dirname(__FILE__) + '/../' + img['src'])
-        img['width'] = size[0]
-        img['height'] = size[1]
+        width = size[0]
+        height = size[1]
+
+        if width > 700
+          multiplier = 700.0 / width
+          width = (multiplier * width).round
+          height = (multiplier * height).round
+        end
+
+        img['width'] = width
+        img['height'] = height
       end
 
       post.output = doc.to_s
