@@ -14,7 +14,7 @@ Alright, this is something I've been wanting to write about for a while now. But
 
 First, make sure you check out the posts from my amazing coworkers talking about their experiences:
 
-* [Haney's experience](https://www.haneycodes.net/how-i-got-a-job-at-stack-exchange/)
+* [Haney's experience](https://www.davidhaney.io/how-i-got-a-job-at-stack-exchange/)
 * [Dave's first year as a data scientist at Stack](http://varianceexplained.org/r/year_data_scientist/)
 * [Jon's first six weeks](https://jonhmchan.com/essays/2014/1/16/my-first-six-weeks-working-at-stack-overflow)
 * [Jon's first year](https://jonhmchan.com/essays/2014/12/2/my-first-twelve-months-working-at-stack-overflow)
