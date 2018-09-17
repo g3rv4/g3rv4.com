@@ -11,7 +11,7 @@ I built a Chrome extension that makes Slack even better :) It was called BetterS
 
 **UPDATE:** The extension was unpublished from the chrome web store following [Slack's Legal Team request]({% post_url 2018-08-29-bye-bye-betterslack %}).
 
-**UPDATE Sept 14th 2018:** After talks with folks from Slack and a rename... Taut (fka BetterSlack) is now live back!!! You can find it both for Chrome and Firefox. See more details at [taut.rocks](https://taut.rocks).
+**UPDATE Sept 14th 2018:** After talks with folks from Slack and a rename... Taut (fka BetterSlack) is now live back!!! You can find on Chrome, Firefox and Opera. See more details at [taut.rocks](https://taut.rocks).
 
 ---
 
