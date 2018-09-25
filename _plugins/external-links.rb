@@ -98,7 +98,7 @@ module Jekyll
         end
       end
 
-      doc.to_s
+      doc.at('body').inner_html
     end
 
   end
