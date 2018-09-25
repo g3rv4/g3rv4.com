@@ -2,6 +2,7 @@
 layout: post
 title: "Bye bye BetterSlack"
 date: "2018-08-29 01:00:00 -0300"
+description: "I wrote BetterSlack and Slack asked me to take it down. Find the story here."
 ---
 Less than 2 days after announcing BetterSlack, I got an email from somebody on Slack's Legal team informing me that the extension was in violation of their Acceptable Use Policy.
 

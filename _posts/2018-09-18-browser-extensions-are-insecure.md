@@ -2,6 +2,7 @@
 layout: post
 title: "Want a secure browser? Disable your extensions"
 date: "2018-09-18 10:00:00 -0300"
+description: "How extensions are extremely insecure and free to leak your data. Do you check their source code? Even when they are silently updated?"
 ---
 While working on Taut (my browser extension to personalize Slack) I realized just how easy it is for an extension to go rogue. In this article I explain how a malicious extension dev could really steal your data.
 

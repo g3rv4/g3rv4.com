@@ -16,11 +16,6 @@ pipeline:
 
       # Expire Cloudflare's cache
       - "curl -X DELETE \"https://api.cloudflare.com/client/v4/zones/$${CLOUDFLARE_ZONE}/purge_cache\" -H \"X-Auth-Email: $${CLOUDFLARE_EMAIL}\" -H \"X-Auth-Key: $${CLOUDFLARE_KEY}\" -H \"Content-Type: application/json\" --data '{\"purge_everything\":true}'"
-      - echo 'sleeping 30 seconds...'
-      - sleep 30
-
-      # hit all the routes
-      - phantomjs --ignore-ssl-errors=true --ssl-protocol=any /var/building-scripts/force-cache.js $$(wget -O - https://g3rv4.com/sitemap.xml | grep loc | sed 's/ *<loc>\(.*\)<\\\/loc>/\\1/' | sed ':a;N;$$!ba;s/\\\n/ /g')
 
     secrets: [cloudflare_zone, cloudflare_email, cloudflare_key]
     volumes:

@@ -2,6 +2,7 @@
 layout: post
 title: "Making Slack better with BetterSlack"
 date: "2018-08-26 19:00:00 -0300"
+description: "Here's a tiny extension that improves my Slack experience. Check it out!"
 ---
 I built a Chrome extension that makes Slack even better :) It was called BetterSlack and it got unpublished following Slack's Legal Team's request. On this blog post I announced it.
 
