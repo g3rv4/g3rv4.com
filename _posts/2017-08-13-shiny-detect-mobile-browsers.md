@@ -14,7 +14,7 @@ If you have a shiny app, you don't pay for the pro version, and you want to dete
 
 My first suggestion was for her to check out the user agent... she did it by using     `session$request$HTTP_USER_AGENT` and locally, it worked just fine. The fun part was when she deployed the code to her shiny server...
 
-She wouldn't get a user agent at all. Of course, I forgot to pass the header on nginx... but, even after I did (and verified on the shiny server traffic logs that it was being received by shiny) the value was still empty. And the reason was... [it's a Pro feature](http://docs.rstudio.com/shiny-server/#proxied-headers)! I understand they need to make money out of their beautiful software, but this sounds... odd to me.
+She wouldn't get a user agent at all. Of course, I forgot to pass the header on nginx... but, even after I did (and verified on the shiny server traffic logs that it was being received by shiny) the value was still empty. And the reason was... [it's a Pro feature](https://docs.rstudio.com/shiny-server/#proxied-headers)! I understand they need to make money out of their beautiful software, but this sounds... odd to me.
 
 # How do we do it?
 

@@ -179,7 +179,7 @@ app.run(function ($rootScope, $window, $http) {
 });
 {% endhighlight %}
 
-This was all good... but then I realized I had a major flaw... passing the token like that, an attacker could just try different tokens until they got one right. That would be quite a time consuming task, as there are 2^122 or 5,316,911,983,139,663,491,615,228,241,121,400,000 possible combinations ([source](http://mrdee.blogspot.com/2005/11/how-many-guid-combinations-are-there.html) with extremely interesting comments about it) but... it still felt wrong.
+This was all good... but then I realized I had a major flaw... passing the token like that, an attacker could just try different tokens until they got one right. That would be quite a time consuming task, as there are 2^122 or 5,316,911,983,139,663,491,615,228,241,121,400,000 possible combinations ([source](https://mrdee.blogspot.com/2005/11/how-many-guid-combinations-are-there.html) with extremely interesting comments about it) but... it still felt wrong.
 
 That's when I included OAuth... If I can give a user a signed token, then I feel safe enough. The idea here is to give a token that expires in 24 hours, and have that token have, as a claim, the GUID I'm using to authenticate them on redis. Then, even if the OAuth token is valid, I'd verify if it's expired (using the redis data).
 

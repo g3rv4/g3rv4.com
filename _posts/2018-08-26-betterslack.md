@@ -12,11 +12,11 @@ I built a Chrome extension that makes Slack even better :) It was called BetterS
 
 **UPDATE:** The extension was unpublished from the chrome web store following [Slack's Legal Team request]({% post_url 2018-08-29-bye-bye-betterslack %}).
 
-**UPDATE Sept 14th 2018:** After talks with folks from Slack and a rename... Taut (fka BetterSlack) is now live back!!! You can find on Chrome, Firefox and Opera. See more details at [taut.rocks](https://taut.rocks).
+**UPDATE Sept 14th 2018:** After talks with folks from Slack and a rename... Refined (fka Taut) (fka BetterSlack) is now live back!!! You can find on Chrome, Firefox and Opera. See more details at [refined.chat](https://refined.chat).
 
 ---
 
-There are 2 or 3 things about Slack that I think can be made better. That's why I built BetterSlack. It's a Chrome extension that injects javascript into your Slack environments to add (or remove) features. You can find [its source code here](https://github.com/g3rv4/Taut) or watch my [3 minutes demo](https://www.youtube.com/watch?v=cXDXX9eYQPs).
+There are 2 or 3 things about Slack that I think can be made better. That's why I built BetterSlack. It's a Chrome extension that injects javascript into your Slack environments to add (or remove) features. You can find [its source code here](https://github.com/g3rv4/Refined) or watch my [3 minutes demo](https://www.youtube.com/watch?v=cXDXX9eYQPs).
 
 # What does it do? (and why)
 

@@ -28,4 +28,4 @@ Also, at that point, the friends from Asterisk released Asterisk 12... with a RE
 
 My good friend Juan lent me his Raspberry Pi to try it out. I know there are some images around with Asterisk already installed, but I preferred to go ahead and cherry pick what would be installed. I followed the steps at Mathew Jordan's blog (now offline) and voilá... I won't say that the compilation was fast... but it got there :) and here I am, placing calls through the Raspberry.
 
-I still perceive a small delay on the calls (way better than on a VPS though) even when I set `ulaw:10` and `alaw:10` as codecs... not exactly sure why that happens (I'm just getting started here), but I've already ordered an [ODROID U3](https://www.hardkernel.com/main/products/prdt_info.php?g_code=G138745696275) to discard that it's due to the Raspberry Pi's lack of power.
+I still perceive a small delay on the calls (way better than on a VPS though) even when I set `ulaw:10` and `alaw:10` as codecs... not exactly sure why that happens (I'm just getting started here), but I've already ordered an ODROID U3 to discard that it's due to the Raspberry Pi's lack of power.

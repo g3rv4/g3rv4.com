@@ -4,11 +4,11 @@ title: "Want a secure browser? Disable your extensions"
 date: "2018-09-18 10:00:00 -0300"
 description: "How extensions are extremely insecure and free to leak your data. Do you check their source code? Even when they are silently updated?"
 ---
-While working on Taut (my browser extension to personalize Slack) I realized just how easy it is for an extension to go rogue. In this article I explain how a malicious extension dev could really steal your data.
+While working on Refined (my browser extension to personalize Slack) I realized just how easy it is for an extension to go rogue. In this article I explain how a malicious extension dev could really steal your data.
 
 <!--more-->
 
-On Sept 14th I renamed BetterSlack to [Taut](https://taut.rocks) and shipped it to the Chrome Web Store. The extension had been live for 2 or 3 days and then it was unpublished for a couple weeks... but users continued using it. On this new version, I was including a couple bugfixes, a new feature, the rename and a warning notice. That looks like this:
+On Sept 14th I renamed BetterSlack to Taut (and later to [Refined](https://refined.chat)) and shipped it to the Chrome Web Store. The extension had been live for 2 or 3 days and then it was unpublished for a couple weeks... but users continued using it. On this new version, I was including a couple bugfixes, a new feature, the rename and a warning notice. That looks like this:
 
 ![Taut warning](/public/images/tautWarning.png)
 
@@ -99,13 +99,13 @@ And... there are more examples of extensions doing bad stuff:
 * [Bank-fraud malware not detected by any AV hosted in Chrome Web Store. Twice](https://arstechnica.com/information-technology/2017/08/bank-fraud-malware-not-detected-by-any-av-hosted-in-chrome-web-store-twice/)
 * [Chrome Extensions Spreading Through Facebook Caught Stealing Data](https://hackernoon.com/chrome-extensions-spreading-through-facebook-caught-stealing-data-4aa9fc3b3a06) (at least now Google disabled manually installing CRX from outside their store)
 
-## If after reading this you still want to install Taut...
+## If after reading this you still want to install Refined...
 
-Taut lets you personalize your Slack experience by doing [a bunch of things](https://github.com/g3rv4/Taut/blob/master/README.md) that I find super useful. You can get it at [taut.rocks](https://taut.rocks).
+Refined lets you personalize your Slack experience by doing [a bunch of things](https://github.com/g3rv4/Refined/blob/master/README.md) that I find super useful. You can get it at [refined.chat](https://refined.chat).
 
 I built it, I won't do anything bad with it... but in the end, you need to trust me (and after all, that's exactly what I'd say if my end game was actually stealing your info).
 
-You can always inspect the code, [build it from source](https://github.com/g3rv4/Taut#build-from-source) and load THAT on your browser.
+You can always inspect the code, [build it from source](https://github.com/g3rv4/Refined#build-from-source) and load THAT on your browser.
 
 ## Thank you reviewers!
 

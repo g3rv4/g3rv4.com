@@ -13,7 +13,7 @@ blogger_orig_url: http://blog.gmc.uy/2015/09/compiling-phantomjs-20-on-odroid-u3
 The title says it all... c++ compilation fun times!
 <!--more-->
 
-As I was working on a project to selectively use Unblock Us on my network devices, I wanted to host the whole thing in my odroid... but compiling it right out of the box didn't work for me. Also, for some reason [this precompiled binary](https://community.online.net/t/phantomjs-2-0-0-binary-for-armv7/764) didn't work for me. Doing this
+As I was working on a project to selectively use Unblock Us on my network devices, I wanted to host the whole thing in my odroid... but compiling it right out of the box didn't work for me. Also, for some reason [this precompiled binary](https://community.scaleway.com/t/phantomjs-2-0-0-binary-for-armv7/764) didn't work for me. Doing this
 
 {% highlight bash %}
 wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.0.0-source.zip

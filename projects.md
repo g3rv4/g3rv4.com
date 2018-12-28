@@ -5,10 +5,10 @@ order: 1
 ---
 Here are some projects that make me proud :)
 
-## Taut - a tool for Slack
-Site: [taut.rocks](https://taut.rocks) - Code: [github](https://github.com/g3rv4/Taut) - On my blog: [announcement]({% post_url 2018-08-26-betterslack %})
+## Refined - a tool for Slack
+Site: [refined.chat](https://refined.chat) - Code: [github](https://github.com/g3rv4/Refined) - On my blog: [announcement]({% post_url 2018-08-26-betterslack %})
 
-This is a browser extension (for Chrome, Firefox and Opera) that lets you personalize your Slack experience. Check [its readme](https://github.com/g3rv4/Taut/blob/master/README.md) for an updated list of features or check out [this 4 minutes video](https://www.youtube.com/watch?v=gyZR-5_JVqQ) where I demo it.
+This is a browser extension (for Chrome, Firefox and Opera) that lets you personalize your Slack experience. Check [its readme](https://github.com/g3rv4/Refined/blob/master/README.md) for an updated list of features or check out [this 4 minutes video](https://www.youtube.com/watch?v=gyZR-5_JVqQ) where I demo it.
 
 [Here you can read my initial post announcing it]({% post_url 2018-08-26-betterslack %})... it was an... experience :) luckily, it's broadly available now.
 

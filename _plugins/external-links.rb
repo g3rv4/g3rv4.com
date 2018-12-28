@@ -75,7 +75,7 @@ module Jekyll
                 # blogpost also redirects to their local version
                 if r.code == '302' and (uri.path =~ /\/[aq]\/[0-9]+\/[0-9]+/ or uri.host.end_with?("blogspot.com"))
                   # It's all good
-                elsif r.code != "200"
+                elsif r.code != "200" and r.code != "202"
                   print 'ERROR! Returned code ' + r.code + ' in file ' + page["path"] + ' when linking to ' + a.get_attribute('href') + "\n"
                 else
                   # print 'OK!'
