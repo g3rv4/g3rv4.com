@@ -30,7 +30,7 @@ extlinks:
   attributes: {rel: nofollow, target: _blank}
   check_links: false #local
 #prod:  check_links: true
-  check_exclude: ['twitter.com']
+  check_exclude: ['twitter.com', 'youtu.be']
   rel_exclude: ['refined.chat']
 
 build_only_this:
