@@ -35,7 +35,7 @@ Code: [github](https://github.com/g3rv4/simple-redirect) - On my blog: [write up
 A python project that lets me handle redirects by doing pushes to a repo. It's extensible so that you can do whatever you want once you detect an update (like... clearing a cache). It may be time to switch this to netlify, since they have [basically the same feature](https://www.netlify.com/docs/redirects/).
 
 ## hide-slow-splits
-Site: [chrome web store](https://chrome.google.com/webstore/detail/hide-slow-splits/clnbkgfhjkcccgodmjpjnplfkijjhhil) - Code: [github](https://github.com/g3rv4/hide-slow-splits) - On my blog: [write up]({% post_url 2016-08-03-hide-slow-splits-garmin-connect-extension %})
+Code: [github](https://github.com/g3rv4/hide-slow-splits) - On my blog: [write up]({% post_url 2016-08-03-hide-slow-splits-garmin-connect-extension %})
 
 A chrome extension that lets you hide slow splits on running activities on Garmin Connect... like if you're running intervals and want to see what your numbers would be if you didn't rest.
 

@@ -13,7 +13,7 @@ tags:
 modified_time: '2016-08-03T19:21:05.880-03:00'
 priority: 0.5
 ---
-A quick tail of how I started running and built a [Chrome Extension](https://chrome.google.com/webstore/detail/hide-slow-splits/clnbkgfhjkcccgodmjpjnplfkijjhhil) that modifies the XHR requests/responses to trick the Garmin Connect web application to show me what I want to see... extensions have _so much power_ over what we see.
+A quick tail of how I started running and built a Chrome Extension that modifies the XHR requests/responses to trick the Garmin Connect web application to show me what I want to see... extensions have _so much power_ over what we see.
 
 <!--more-->
 In October 2015, I was diagnosed with hypertriglyceridemia... basically, I wasn't eating healthy and I wasn't doing enough (ehem... any) exercise.
@@ -28,7 +28,7 @@ Here's an example... I had to run 12 1km intervals (0.62 miles) resting 1:30
 
 ![](/public/images/garmin-connect-extension/before.png)
 
-You can see that all the even numbers last 1:30, have a crappy Avg Pace (because I was resting) and basically screw my activity numbers... because it says that my Average Page was 9:21 minutes/mile... I was super frustrated by this... so instead of just doing the numbers in excel... I developed an extension that hides those splits and updates the numbers for me :) you can [install the extension here](https://chrome.google.com/webstore/detail/hide-slow-splits/clnbkgfhjkcccgodmjpjnplfkijjhhil) and [view its source code here](https://github.com/g3rv4/hide-slow-splits). Basically, you define the criteria of which laps you want to hide and it converts that table to this (now satisfying) one:
+You can see that all the even numbers last 1:30, have a crappy Avg Pace (because I was resting) and basically screw my activity numbers... because it says that my Average Page was 9:21 minutes/mile... I was super frustrated by this... so instead of just doing the numbers in excel... I developed an extension that hides those splits and updates the numbers for me :) you can [view its source code here](https://github.com/g3rv4/hide-slow-splits) (I took it down from the store after... not really using it). Basically, you define the criteria of which laps you want to hide and it converts that table to this (now satisfying) one:
 
 ![](/public/images/garmin-connect-extension/before.png)
 
