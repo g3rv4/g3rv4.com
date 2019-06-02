@@ -5,6 +5,13 @@ order: 1
 ---
 Here are some projects that make me proud :)
 
+## OnChrome
+Code: [github](https://github.com/g3rv4/Refined)
+
+It's a browser extension for Firefox so that users can choose which urls will be opened on Chrome. When the user visits that url on Firefox (either by writing its url on the address bar or by clicking a link) the tab is closed and Chrome opened.
+
+It uses [native messaging](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging), so I had to develop a native application to open Chrome. I chose Go because it had 0 dependencies. Initially it supports MacOS and Windows 64bits.
+
 ## Refined - a tool for Slack
 Site: [refined.chat](https://refined.chat) - Code: [github](https://github.com/g3rv4/Refined) - On my blog: [announcement]({% post_url 2018-08-26-betterslack %})
 
