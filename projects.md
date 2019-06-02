@@ -6,7 +6,7 @@ order: 1
 Here are some projects that make me proud :)
 
 ## OnChrome
-Code: [github](https://github.com/g3rv4/Refined)
+Code: [github](https://github.com/g3rv4/OnChrome)
 
 It's a browser extension for Firefox so that users can choose which urls will be opened on Chrome. When the user visits that url on Firefox (either by writing its url on the address bar or by clicking a link) the tab is closed and Chrome opened.
 
