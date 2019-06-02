@@ -15,11 +15,11 @@ Last year I went to DuraznoConf. This is my conference report :) I loved loved l
 
 [DuraznoConf](http://duraznoconf.uy/) is a conference about technology, and it has great speakers. But it's also more than that. It takes place in a [small city](https://es.wikipedia.org/wiki/Durazno_(Uruguay)), a very unlikely setting for a very unlikely event.
 
-The first person you want to meet in order to begin understanding the conference is [Álvaro](https://twitter.com/old_sound) (its organizer), read [his origin story](https://medium.freecodecamp.org/become-how-i-went-from-selling-food-in-the-street-to-working-for-top-firms-in-tech-6aa61a2d0629) (trust me, it's way better than anything you can read on my blog) and [his write up about the first edition of DuraznoConf](https://medium.freecodecamp.org/duraznoconf-the-human-side-of-programming-12b5f679b312). Álvaro is the mastermind behind [A Computer of One's Own](https://medium.com/a-computer-of-ones-own).
+The first person you want to meet in order to begin understanding the conference is [Álvaro](https://twitter.com/old_sound) (its organizer), read [his origin story](https://www.freecodecamp.org/news/become-how-i-went-from-selling-food-in-the-street-to-working-for-top-firms-in-tech-6aa61a2d0629/) (trust me, it's way better than anything you can read on my blog) and [his write up about the first edition of DuraznoConf](https://www.freecodecamp.org/news/duraznoconf-the-human-side-of-programming-12b5f679b312/). Álvaro is the mastermind behind [A Computer of One's Own](https://medium.com/a-computer-of-ones-own).
 
 He put together the conference after somebody dared him on twitter, living in Switzerland (11.000 kms from Uruguay) with speakers from all over the world. In a city that's far from the capital and where most people don't know anybody working in technology. And with a diverse panel of speakers. And a diverse crowd (you could see people in their 20s and people in their 50s).
 
-From [Álvaro's post](https://medium.freecodecamp.org/duraznoconf-the-human-side-of-programming-12b5f679b312):
+From [Álvaro's post](https://www.freecodecamp.org/news/duraznoconf-the-human-side-of-programming-12b5f679b312/):
 
 > The goal was not to create just another tech conference. We wanted a conference that would get people together, and that would help form a community in far away places.
 >
@@ -85,7 +85,7 @@ Ana Laura is a journalist, and on this talk about fake news (and their very real
 
 She went back to [Theodor Fontane](https://en.wikipedia.org/wiki/Theodor_Fontane) (the father of fake news) to show that they're not a new thing. What's new is that they're invading us (and making it really hard for us to recognize them).
 
-She mentioned the work of [Guarav Oberoi](https://twitter.com/goberoi) who explored what's possible [with "DeepFakes"](https://hackernoon.com/exploring-deepfakes-20c9947c22d9) and he was able to make John Oliver dance as if he was Jimmy Fallon. These tools can easily be used to generate videos (like [fake porn](https://www.washingtonpost.com/technology/2018/12/30/fake-porn-videos-are-being-weaponized-harass-humiliate-women-everybody-is-potential-target/)) that regular people have a hard time figuring out they're fake. When this happens on open platforms (twitter, facebook, instagram), they can be debunked by journalists.
+She mentioned the work of [Guarav Oberoi](https://twitter.com/goberoi) who explored what's possible [with "DeepFakes"](https://goberoi.com/exploring-deepfakes-20c9947c22d9) and he was able to make John Oliver dance as if he was Jimmy Fallon. These tools can easily be used to generate videos (like [fake porn](https://www.washingtonpost.com/technology/2018/12/30/fake-porn-videos-are-being-weaponized-harass-humiliate-women-everybody-is-potential-target/)) that regular people have a hard time figuring out they're fake. When this happens on open platforms (twitter, facebook, instagram), they can be debunked by journalists.
 
 But... we have a problem with Whatsapp... whatever happens on Whatsapp stays in Whatsapp, and people can't intercept fake news. When you receive something, you don't know how many people are talking about it. In India a video (that was originally put together as an awareness campaign in Pakistan) was modified and distributed as a way to denounce gangs kidnapping kids... and [that caused people being lynched](https://www.theguardian.com/world/2018/jul/03/whatsapp-murders-india-struggles-to-combat-crimes-linked-to-messaging-service).
 

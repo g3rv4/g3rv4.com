@@ -110,4 +110,4 @@ And then, on our offer call with Tom, I told him that I was so bummed when I ble
 
 The moment I finished our first call with Tom, I decided I'd blog about their interviewing process regardless of the outcome, as I honestly felt at every step of the way that the experience was super valuable for anyone interested in how great companies work. I especially loved Stack before applying, and the feeling has just got stronger. I can't believe it's been more than 3 months since I started.
 
-Are you about to apply to Stack? DO IT ([here's a glassdoor review](https://www.glassdoor.com/Interview/Stack-Overflow-User-Experience-Researcher-Interview-Questions-EI_IE504626.0,14_KO15,41.htm#InterviewReview_12107239) from someone who wasn't as lucky as I was). You have everything to gain.
+Are you about to apply to Stack? DO IT.
