@@ -68,9 +68,7 @@ Total time? a night that I went to bed at 3am + a Sunday evening for the Go stuf
 Installing the extension should be fairly straightforward (although a bit more involved than installing an extension that doesn't use native messaging).
 
 1. Install the [Firefox extension from their store](https://addons.mozilla.org/en-US/firefox/addon/onchrome/)
-2. Download [the native application](https://github.com/g3rv4/OnChrome/releases) for your environment
-3. Extract the 3 files on a folder
-4. Run the `Install` application
+2. Download [the native application](https://onchro.me/native-applications) for your environment and follon the instructions on that page
 
 And that should be it! Here you can see it working:
 
