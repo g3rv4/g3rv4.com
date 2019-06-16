@@ -30,7 +30,7 @@ extlinks:
   attributes: {rel: nofollow, target: _blank}
   check_links: false #local
 #prod:  check_links: true
-  check_exclude: ['twitter.com', 'youtu.be', 'onchro.me']
+  check_exclude: ['twitter.com', 'youtu.be', 'developer.apple.com']
   rel_exclude: ['refined.chat', 'onchro.me']
 
 build_only_this:
