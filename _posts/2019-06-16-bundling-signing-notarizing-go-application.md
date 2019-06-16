@@ -9,7 +9,7 @@ macOS has Gatekeeper... a mechanism to prevent users from installing software th
 
 <!--more-->
 
-A couple days ago, I wrote [OnChrome](https://onchro.me). It's a Firefox extension with a couple native command line applications. It was all good until I tried to download the file and run it, when I saw this:
+A couple days ago, I wrote [OnChrome](https://onchro.me) (and [blogged about it]({% post_url 2019-06-03-how-to-migrate-to-firefox %})). It's a Firefox extension with a couple native command line applications. It was all good until I tried to download the file and run it, when I saw this:
 
 ![](/public/images/unidentifiedDeveloper.png)
 
