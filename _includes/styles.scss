@@ -540,3 +540,146 @@ blockquote {
     margin-top: 0;
   }
 }
+
+// thanks to dark reader!
+
+html {
+  background-color: #181a1b !important;
+}
+html, body, input, textarea, select, button {
+  background-color: #181a1b;
+}
+html, body, input, textarea, select, button {
+  border-color: #575757;
+  color: #e8e6e3;
+}
+a {
+  color: #3391ff;
+}
+table {
+  border-color: #4c4c4c;
+}
+::placeholder {
+  color: #bab5ab;
+}
+::selection {
+  background-color: #005ccc;
+  color: #ffffff;
+}
+::-moz-selection {
+  background-color: #005ccc;
+  color: #ffffff;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  background-color: #545b00 !important;
+  color: #e8e6e3 !important;
+}
+
+.jfk-bubble {
+  background-color: #000000 !important;
+}
+.vimvixen-hint {
+  background-color: #7b5300 !important;
+  border-color: #d8b013 !important;
+  color: #f3e8c8 !important;
+}
+
+.highlight { background-image: initial; background-color: rgb(24, 26, 27); }
+.highlighter-rouge .highlight { background-image: initial; background-color: rgb(29, 31, 32); }
+.highlight .c { color: rgb(184, 179, 169); }
+.highlight .err { color: rgb(236, 119, 119); background-color: rgb(48, 30, 30); }
+.highlight .cm { color: rgb(184, 179, 169); }
+.highlight .cp { color: rgb(186, 181, 171); }
+.highlight .c1 { color: rgb(184, 179, 169); }
+.highlight .cs { color: rgb(186, 181, 171); }
+.highlight .gd { color: rgb(232, 230, 227); background-color: rgb(71, 0, 0); }
+.highlight .gd .x { color: rgb(232, 230, 227); background-color: rgb(102, 0, 0); }
+.highlight .gr { color: rgb(255, 102, 102); }
+.highlight .gh { color: rgb(186, 181, 171); }
+.highlight .gi { color: rgb(232, 230, 227); background-color: rgb(0, 71, 0); }
+.highlight .gi .x { color: rgb(232, 230, 227); background-color: rgb(0, 102, 0); }
+.highlight .go { color: rgb(186, 181, 171); }
+.highlight .gp { color: rgb(201, 197, 190); }
+.highlight .gu { color: rgb(186, 181, 171); }
+.highlight .gt { color: rgb(255, 102, 102); }
+.highlight .kt { color: rgb(158, 180, 206); }
+.highlight .m { color: rgb(112, 255, 255); }
+.highlight .s { color: rgb(242, 81, 121); }
+.highlight .na { color: rgb(127, 255, 255); }
+.highlight .nb { color: rgb(97, 215, 255); }
+.highlight .nc { color: rgb(158, 180, 206); }
+.highlight .no { color: rgb(127, 255, 255); }
+.highlight .ni { color: rgb(255, 127, 255); }
+.highlight .ne { color: rgb(255, 112, 112); }
+.highlight .nf { color: rgb(255, 112, 112); }
+.highlight .nn { color: rgb(201, 197, 190); }
+.highlight .nt { color: rgb(127, 174, 255); }
+.highlight .nv { color: rgb(127, 255, 255); }
+.highlight .w { color: rgb(194, 189, 180); }
+.highlight .mf { color: rgb(112, 255, 255); }
+.highlight .mh { color: rgb(112, 255, 255); }
+.highlight .mi { color: rgb(112, 255, 255); }
+.highlight .mo { color: rgb(112, 255, 255); }
+.highlight .sb { color: rgb(242, 81, 121); }
+.highlight .sc { color: rgb(242, 81, 121); }
+.highlight .sd { color: rgb(242, 81, 121); }
+.highlight .s2 { color: rgb(242, 81, 121); }
+.highlight .se { color: rgb(242, 81, 121); }
+.highlight .sh { color: rgb(242, 81, 121); }
+.highlight .si { color: rgb(242, 81, 121); }
+.highlight .sx { color: rgb(242, 81, 121); }
+.highlight .sr { color: rgb(112, 255, 148); }
+.highlight .s1 { color: rgb(242, 81, 121); }
+.highlight .ss { color: rgb(255, 112, 220); }
+.highlight .bp { color: rgb(186, 181, 171); }
+.highlight .vc { color: rgb(127, 255, 255); }
+.highlight .vg { color: rgb(127, 255, 255); }
+.highlight .vi { color: rgb(127, 255, 255); }
+.highlight .il { color: rgb(112, 255, 255); }
+.icon > svg path { fill: rgb(186, 181, 171); }
+.icon :hover { text-decoration-color: initial; }
+amp-img { background-color: rgb(60, 64, 67); }
+body { background-color: rgb(24, 26, 27); }
+.site-header .page-links a { text-decoration-color: initial; color: rgb(186, 181, 171); }
+.site-header .page-links a:hover { color: rgb(214, 211, 205); }
+.blog-header .blog-title { outline-color: initial; color: rgb(214, 211, 205); }
+.blog-header .blog-description { color: rgb(195, 191, 182); }
+.content article { border-bottom-color: rgb(60, 60, 52); }
+.content article:last-child { border-bottom-color: initial; }
+.content article .post-title a { text-decoration-color: initial; color: rgb(214, 211, 205); }
+.content article .post-title a:hover { text-decoration-color: initial; }
+.content article .post-excerpt { color: rgb(195, 191, 182); }
+.content article .post-meta { color: rgb(186, 181, 170); }
+.content article .post-meta a { color: rgb(186, 181, 170); text-decoration-color: initial; }
+.content article .post-meta a:hover { text-decoration-color: initial; }
+.index-headline { border-top-color: rgb(60, 60, 57); }
+.index-headline span { color: rgb(186, 181, 170); }
+.pagination a { color: rgb(186, 181, 171); text-decoration-color: initial; }
+.pagination a:hover { color: rgb(214, 211, 205); }
+.site-footer { color: rgb(186, 181, 171); }
+.site-footer a { color: rgb(195, 191, 182); text-decoration-color: initial; }
+.site-footer a:hover { color: rgb(214, 211, 205); }
+.post .post-title { color: rgb(214, 211, 205); }
+.post .author-image { background-image: url("/public/images/g3rv4.jpg"); }
+.post .post-meta-text { color: rgb(186, 181, 170); }
+.post .post-content { color: rgb(214, 211, 205); }
+.post .post-content table, .post .post-content th, .post .post-content td { border-color: rgb(102, 102, 102); }
+.post .post-content p { color: rgb(214, 211, 205); }
+.post .post-content a { color: rgb(214, 211, 205); text-decoration-color: initial; }
+.post .post-content figcaption { color: rgb(195, 191, 182); outline-color: initial; }
+.post .post-content hr { border-color: rgb(58, 58, 58); }
+.post .post-content blockquote { border-left-color: rgb(56, 114, 67); }
+.post .bottom-teaser hr { border-color: rgb(58, 58, 58); }
+.post .bottom-teaser .isLeft a { color: rgb(232, 230, 227); text-decoration-color: initial; }
+.post .bottom-teaser .isLeft a:hover { color: rgb(214, 211, 205); text-decoration-color: initial; }
+.post .bottom-teaser .isLeft p.published { color: rgb(186, 181, 171); }
+.post .bottom-teaser .isRight .site-footer { color: rgb(186, 181, 171); }
+.post .bottom-teaser .isRight .site-footer a { color: rgb(214, 211, 205); text-decoration-color: initial; }
+.post .bottom-teaser .isRight .site-footer a:hover { text-decoration-color: initial; }
+.post .bottom-teaser .isRight .site-footer .poweredby { color: rgb(214, 211, 205); }
+.share a { text-decoration-color: initial; color: rgb(194, 189, 180); }
+.share a:hover { color: rgb(214, 211, 205); }
+pre, code { border-color: rgb(56, 56, 56); background-color: rgb(29, 31, 32); }
+pre > code { border-color: initial; }
