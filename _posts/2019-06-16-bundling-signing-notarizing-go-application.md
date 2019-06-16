@@ -51,14 +51,14 @@ bin/macOS [master●] » security find-identity -v
 
 ```
 
-I have two certs. AAA should be used to sign installers and BBB should be used to sign applications. As I want to sign applications, I'm going to use use AAA. Apple also requires the use of a hardened runtime and a timestamp signature. Both things can be accomplished when signing by using the `--timestamp --options runtime` parameters.
+I have two certs. AAA should be used to sign installers and BBB should be used to sign applications. As I want to sign applications, I'm going to use use BBB. Apple also requires the use of a hardened runtime and a timestamp signature. Both things can be accomplished when signing by using the `--timestamp --options runtime` parameters.
 
 So I went ahead and signed my two executables by running
 
 ```
 
-bin/macOS [master●] » codesign -s AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -v --timestamp --options runtime Menu
-bin/macOS [master●] » codesign -s AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -v --timestamp --options runtime FirefoxEndpoint
+bin/macOS [master●] » codesign -s BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB -v --timestamp --options runtime Menu
+bin/macOS [master●] » codesign -s BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB -v --timestamp --options runtime FirefoxEndpoint
 
 ```
 
@@ -142,7 +142,7 @@ The next step is signing it (using the `--deep` parameter so that everything is 
 
 ```
 
-bin/macOS [master●] » codesign -s AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -v --timestamp --deep --options runtime OnChrome.app
+bin/macOS [master●] » codesign -s BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB -v --timestamp --deep --options runtime OnChrome.app
 OnChrome.app: signed app bundle with generic [me.onchro]
 
 ```
