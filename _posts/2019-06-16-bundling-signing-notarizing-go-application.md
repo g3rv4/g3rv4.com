@@ -21,7 +21,7 @@ So I started reading how I could get rid of it. I had a couple requirements:
 * It shouldn't ask for the root password
 * Gatekeeper should be happy about it
 
-I was able to make it and automate it, but it was an interesting road. This is not a short article as I'm sharing a couple dead ends I hit, so maybe you just want to take a look into [the script that does everything](https://github.com/g3rv4/OnChrome/blob/master/BuildApp.ps1) and save some time.
+I was able to make it and automate it, but it was an interesting road. This is not a short article as I'm sharing a couple dead ends I hit, so maybe you just want to take a look into [the script that does everything](https://github.com/g3rv4/OnChrome/blob/master/BuildAppMacOS.ps1) and save some time.
 
 My application consists of 2 terminal executables built with Go. Nothing more and nothing less... so there iss no app bundle or fancy GUI for it. I just want to distribute these 2 files without Gatekeeper complaining.
 
@@ -211,7 +211,7 @@ It sounds like it sees the signed dmg and then tries to see if it was notarized 
 
 # Automating everything
 
-I could do everything manually... but it's a PITA. So I went ahead and automated everything with Powershell. [You can see the script here](https://github.com/g3rv4/OnChrome/blob/master/BuildApp.ps1), in the notarization step it checks every 10 second the status and it staples once everything is ok.
+I could do everything manually... but it's a PITA. So I went ahead and automated everything with Powershell. [You can see the script here](https://github.com/g3rv4/OnChrome/blob/master/BuildAppMacOS.ps1), in the notarization step it checks every 10 second the status and it staples once everything is ok.
 
 You can pass as many arguments to it as you want, if you don't set `-CodeSign`, then it won't ask for any of the codesigning details.
 
