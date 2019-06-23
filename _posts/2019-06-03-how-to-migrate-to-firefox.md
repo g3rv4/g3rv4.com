@@ -9,7 +9,7 @@ I've been wanting to migrate from Chrome to Firefox for a while now... but I use
 
 <!--more-->
 
-**TL;DR**: I wrote [OnChrome](https://addons.mozilla.org/en-US/firefox/addon/onchrome/), a Firefox extension that opens the urls you want on Chrome. To use it, make sure you [install the native app](https://github.com/g3rv4/OnChrome/releases). Why a native app? well, keep on reading :P
+**TL;DR**: I wrote [OnChrome](https://onchro.me), a Firefox extension that opens the urls you want on Chrome. To use it, make sure you [install the native app](https://onchro.me/native-applications). Why a native app? well, keep on reading :P
 
 In case you missed it, Google is planning to change what extensions can do [with the manifest v3](https://docs.google.com/document/d/1nPu6Wy4LWR66EFLeYInl3NzzhHzc-qnk4w4PX-0XMw8/edit#). A bunch of things are great (I really really think that [as things stand, extensions are really dangerous]({% post_url 2018-09-18-browser-extensions-are-insecure %})) but the fact that [they're severely limiting how Ad Blockers can do their thing](https://bugs.chromium.org/p/chromium/issues/detail?id=896897&desc=2#c23) is a bit worrysome to me.
 
@@ -80,14 +80,15 @@ The only *weird* thing the app does is registering it to receive messages from t
 
 To completely remove the extension, the application, and any traces of it you should:
 
-1. Run the `Uninstall` application
-2. Remove the add on from Firefox
-3. Delete the folder where you have the app
+1. Run the application
+2. Press `2` to unregister it
+3. Remove the native application
+4. Uninstall the extension from Firefox
 
 ## And that's it!
 
 I'm going to probably add things like "Open on Chrome" by right-clicking on a link... but other than that, it does exactly what I wanted it to :)
 
-You can find its source code at [onchro.me](https://onchro.me), and I'll *someday* build a small website for it like I did for [Refined](https://refined.chat).
+You can find its source code and more stuff at [onchro.me](https://onchro.me).
 
 Have comments? tweet me at @g3rv4!
