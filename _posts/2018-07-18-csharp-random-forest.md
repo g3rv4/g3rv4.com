@@ -20,7 +20,7 @@ Of course, [wikipedia has the answer](https://en.wikipedia.org/wiki/Random_fores
 And, if you're good at choosing the underlying trees, this approach works very well for some problems.
 
 ## What is the problem then?
-After we had our random forest working (we used some nice packages in R to build them)... they mentioned that at that time, we didn't really have a way of productionizing it. Our data team was looking into [running R in SQL Server](https://docs.microsoft.com/en-us/sql/advanced-analytics/r/sql-server-r-services?view=sql-server-2017), but I figured that if a random forest is just a collection of decision trees... then it shouldn't be complicated to run them in c#.
+After we had our random forest working (we used some nice packages in R to build them)... they mentioned that at that time, we didn't really have a way of productionizing it. Our data team was looking into [running R in SQL Server](https://docs.microsoft.com/en-us/sql/advanced-analytics/r/sql-server-r-services?view=sql-server-2016), but I figured that if a random forest is just a collection of decision trees... then it shouldn't be complicated to run them in c#.
 
 Then... I started trying to make it happen. Not because we had a use case for it (although secretly I was hoping we would to prove this was better than relying on SQL Server running R) but mainly to see if I could do it. I could :)
 
