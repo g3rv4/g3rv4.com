@@ -22,10 +22,10 @@ I haven't verified if the web is faster, but I have no reasons to believe it isn
 
 Could they have exposed these features? they could. Did they do it to make it harder to develop extensions that mess with the user experience? I don't know, but it doesn't seem unlikely.
 
-I was able to overcome these problems... but it took a significant amount of time and effort. Now that I have a baby, time is hard to come by. And as the main goal of Refined is to make *my* life easier (and don't want to play a cat and mouse game that I can't win) I'm continuing the development in private.
+I was able to overcome these problems... but it took a significant amount of time and effort. Now that I have a baby, time is hard to come by. And as the main goal of Refined is to make *my* life easier (and don't want to play a cat and mouse game that I can't win) I'm continuing its development in private.
 
 I'm going to leave the latest version up in GitHub so that if you want to continue its development you can fork it and do as you please.
 
-If you're somebody I know and you'd like to have access to it, hit me up.
+If you're somebody I know and you'd like to have access to the private version, hit me up.
 
 I'm sorry for the folks that used it and enjoyed it. Thanks for everything.
