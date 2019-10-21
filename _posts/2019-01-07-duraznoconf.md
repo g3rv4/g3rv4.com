@@ -13,7 +13,7 @@ Last year I went to DuraznoConf. This is my conference report :) I loved loved l
 
 # What is it, and why is it so special?
 
-[DuraznoConf](http://duraznoconf.uy/) is a conference about technology, and it has great speakers. But it's also more than that. It takes place in a [small city](https://es.wikipedia.org/wiki/Durazno_(Uruguay)), a very unlikely setting for a very unlikely event.
+[DuraznoConf](https://duraznoconf.uy/) is a conference about technology, and it has great speakers. But it's also more than that. It takes place in a [small city](https://es.wikipedia.org/wiki/Durazno_(Uruguay)), a very unlikely setting for a very unlikely event.
 
 The first person you want to meet in order to begin understanding the conference is [Álvaro](https://twitter.com/old_sound) (its organizer), read [his origin story](https://www.freecodecamp.org/news/become-how-i-went-from-selling-food-in-the-street-to-working-for-top-firms-in-tech-6aa61a2d0629/) (trust me, it's way better than anything you can read on my blog) and [his write up about the first edition of DuraznoConf](https://www.freecodecamp.org/news/duraznoconf-the-human-side-of-programming-12b5f679b312/). Álvaro is the mastermind behind [A Computer of One's Own](https://medium.com/a-computer-of-ones-own).
 
@@ -130,7 +130,7 @@ The next day, there were workshops where attendants had the opportunity to try s
 
 # Diversity
 
-The diversity of the [speakers line up](http://duraznoconf.uy/#speakers) is unlike any technical conference in Uruguay. That's not by coincidence, it's the result of Álvaro's hard work. The [code of conduct](http://duraznoconf.uy/#conducta) is clear and it was mentioned on the conference opening.
+The diversity of the [speakers line up](https://duraznoconf.uy/2018/#speakers) is unlike any technical conference in Uruguay. That's not by coincidence, it's the result of Álvaro's hard work. The [code of conduct](https://duraznoconf.uy/2018/#conducta) is clear and it was mentioned on the conference opening.
 
 Conference organizers: it is possible.
 

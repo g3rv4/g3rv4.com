@@ -32,7 +32,7 @@ A tiny library to productionize R random forests in C#. You basically build your
 ## simple-redirect
 Code: [github](https://github.com/g3rv4/simple-redirect) - On my blog: [write up]({% post_url 2017-01-20-nice-urls %})
 
-A python project that lets me handle redirects by doing pushes to a repo. It's extensible so that you can do whatever you want once you detect an update (like... clearing a cache). It may be time to switch this to netlify, since they have [basically the same feature](https://www.netlify.com/docs/redirects/).
+A python project that lets me handle redirects by doing pushes to a repo. It's extensible so that you can do whatever you want once you detect an update (like... clearing a cache). It may be time to switch this to netlify, since they have [basically the same feature](https://docs.netlify.com/routing/redirects/).
 
 ## hide-slow-splits
 Code: [github](https://github.com/g3rv4/hide-slow-splits) - On my blog: [write up]({% post_url 2016-08-03-hide-slow-splits-garmin-connect-extension %})
