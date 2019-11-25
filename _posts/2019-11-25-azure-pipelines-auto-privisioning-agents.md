@@ -3,9 +3,7 @@ layout: post
 title: "Using Azure Pipelines with auto-provisioned self-hosted agents."
 date: "2019-11-25 09:00:00 -0300"
 ---
-I started playing with Azure Pipelines, and while it looked great, the lack of caches and inspectability on Microsoft's agents made it clear that I wanted self-hosted agents. BUT I didn't want to pay for a machine that I will only house a couple of hours a month.
-
-In this post, I touch on my motivations, the challenges I found, and how I made it work.
+I started playing with Azure Pipelines, and while it looked great, the lack of caches and inspectability on Microsoft's agents made it clear that I wanted self-hosted agents. BUT I didn't want to pay for a machine that I will only house a couple of hours a month. In this post, I touch on my motivations, the challenges I found, and how I made it work.
 
 <!--more-->
 
@@ -64,7 +62,7 @@ Cloud-init installs some dependencies (I want to be able to run Powershell, and 
 
 So now, I have an API-invokable way of creating and destroying an agent. YAY!
 
-Note that I don't care about multiple agents at this point. This is because I'm too cheap to pay for a parallel job (I don't need it). I may eventually buy one if I see a need for it, and I can pay with my MSDN subscription.
+Note that I don't care about multiple agents at this point. This is because I haven't bought any parallel jobs (yet).
 
 ## Playing with Azure Pipelines and its API
 
@@ -80,7 +78,7 @@ Another interesting bit is that if there are no agents at all, a build will fail
 
 The build doesn't start! You need to queue another build for the first one to be started. That's not great.
 
-Now, what I *can* do is run whatever code I want on Microsoft's agents. That means I can make _that_ agent responsible for creating the agent that will eventually build my code. Or it can do nothing if there's already an online agent.
+Now, what I *can* do is run whatever code I want on Microsoft's agents. That means I can make _that_ agent responsible for creating the agent that will eventually build my code. Or it can do nothing if there's already an agent online.
 
 ## Choosing a cloud provider
 
@@ -141,10 +139,10 @@ The idea is to:
 
 * As the first stage on every build, have a "wake up" step that runs on a Microsoft hosted agent. That wake up is going to call "Start an agent if needed" and wait for Azure Pipelines to report it as online (so that builds don't get in the weird state where they're enqueued but don't start until there's another build)
 * On the agent provisioning logic, add a couple of cron jobs:
- * One that runs every minute that calls "Destroy agent if needed."
- * One that runs every minute that calls "Apply a Terraform plan if needed."
+   * One that runs every minute that calls "Destroy agent if needed."
+   * One that runs every minute that calls "Apply a Terraform plan if needed."
 
-And... that's it! Whenever I push to an Azure Pipelines project, an Azure agent runs. If there's an agent, it does nothing. If there isn't, it provisions one and waits for it. And it's the agent the one that takes care of its destruction.
+And... that's it! Whenever I push to an Azure Pipelines project, an Azure agent runs. If there's an agent, it does nothing. If there isn't, it provisions one and waits for it. And it's the agent the one that takes care of its own destruction.
 
 ## Deploying my build to production
 
@@ -170,6 +168,10 @@ It works for me... but if this was a real project, it's an extremely brittle sol
 It also makes it impossible to run the release steps as they were on a particular release. If you know that release P works, you can't just reapply it. You also need to modify the version of the release scripts that get pulled to match what it was when release P was run.
 
 I guess this is the thing I liked the least about the whole experience, and [it seems like I'm not alone](https://github.com/MicrosoftDocs/vsts-docs/issues/4486).
+
+## Last words
+
+This is my first attempt into solving this... it's all very rough, so if you have ideas on how to make it better (or reduce the custom tooling), let me know! I'd love to improve it and learn better ways of provisioning / deprovisioning agents.
 
 ## Resources
 
