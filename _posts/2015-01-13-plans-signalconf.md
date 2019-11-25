@@ -17,7 +17,7 @@ When I wrote this I was super excited to be attending Twilio's conference, and I
 <!--more-->
 It's been a while since I last wrote in here... mainly because I've been working like crazy, but I'm expecting to start blogging on a regular basis at least until the [Signal conference](https://www.twilio.com/blog/2015/01/introducing-signal-twilio-conference-nt.html) (the new version of the twilio conference).
 
-The (first and) last conference I attended was the 2013 [360\|iDev](http://360idev.com/)... and even if I ended up leaving the iOS world, I got something that changed my (professional) life from it... The conviction that (almost) everything is possible. I was already working with Twilio's APIs, I started playing with Asterisk, I started this blog, people started contacting me about it, I left the company I was working for and I'm proud to say that I'm working exclusively on stuff that I find interesting.
+The (first and) last conference I attended was the 2013 [360\|iDev](https://360idev.com/)... and even if I ended up leaving the iOS world, I got something that changed my (professional) life from it... The conviction that (almost) everything is possible. I was already working with Twilio's APIs, I started playing with Asterisk, I started this blog, people started contacting me about it, I left the company I was working for and I'm proud to say that I'm working exclusively on stuff that I find interesting.
 
 I went to that conference with very little experience on that particular technology, having only worked on an iOS app before, and without enough knowledge to really stand out from the crowd.
 
