@@ -5,7 +5,10 @@
 
 trigger:
 - master
-pr: none
+pr:
+  branches:
+    include:
+    - '*'
 
 resources:
   repositories:
