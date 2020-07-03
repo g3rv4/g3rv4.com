@@ -1,0 +1,79 @@
+name: build
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: Azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    - uses: Azure/get-keyvault-secrets@v1.0
+      with:
+        keyvault: "ActionsBuild"
+        secrets: 'OctopusServerUrl, OctopusApiKey'
+      id: azureSecrets
+
+    - name: Set variables
+      shell: pwsh
+      run: |
+        $basePath = Pwd
+        $sitePath = Join-Path $basePath _site
+        $nuspecPath = Join-Path $basePath g3rv4.com.nuspec
+
+        [xml]$xmlDoc = Get-Content $nuspecPath
+        $versionElement = $xmlDoc['package']['metadata']['version']
+        $version = [version]$versionElement.InnerText
+        $newVersion = [version]"$($version.Major).$($version.Minor).$($env:GITHUB_RUN_NUMBER)"
+        $newVersionStr = $newVersion.ToString()
+
+        Write-Host "::set-env name=BASE_PATH::$basePath"
+        Write-Host "::set-env name=SITE_PATH::$sitePath"
+        Write-Host "::set-env name=VERSION::$newVersionStr"
+    - name: Build site
+      shell: pwsh
+      run: |
+        sed -i '/#local/d' _config.yml
+        sed -i 's/#prod://g' _config.yml
+
+        $pwd = pwd
+        $uid = sh -c 'id -u'
+        $gid = sh -c 'id -g'
+
+        $env:GITHUB_SHA.SubString(0, 7) | ConvertTo-Json | Out-File "_data/version.json"
+
+        docker run --rm -v "$($pwd):/var/site-content" g3rv4/blog-builder bash -c "/root/.rbenv/shims/jekyll build && chown -R $($uid):$($gid) /var/site-content"
+    - name: Package it
+      shell: pwsh
+      run: |
+        $basePath = $env:BASE_PATH
+        $sitePath = $env:SITE_PATH
+        $version = $env:VERSION
+
+        cp "$($basePath)/g3rv4.com.nuspec" "$($sitePath)/g3rv4.com.nuspec"
+
+        $nuspecPath = Join-Path $sitePath g3rv4.com.nuspec
+
+        [xml]$xmlDoc = Get-Content $nuspecPath
+        $metadataElement = $xmlDoc['package']['metadata']
+        $metadataElement['repository'].SetAttribute("commit", $env:GITHUB_SHA)
+        $metadataElement['version'].InnerText = $version
+        $xmlDoc.Save($nuspecPath)
+
+        Compress-Archive -Path "$($sitePath)/*" -DestinationPath "$($basePath)/g3rv4.com.$($version).nupkg"
+
+        $nugetConfig = Get-Content nuget.config
+        $nugetConfig = $nugetConfig.Replace("{username}", $env:GITHUB_ACTOR).Replace("{password}", "${{ secrets.GITHUB_TOKEN }}")
+        Set-Content -Path nuget.config -Value $nugetConfig
+    - name: Push it to GitHub
+      run: until dotnet nuget push $BASE_PATH/g3rv4.com.$VERSION.nupkg --source "github" --skip-duplicate; do sleep 3; done
+    - name: Create and deploy an Octopus release
+      run: |
+        # nuget.config points to GitHub Packages. Delete it so that it uses nuget
+        rm nuget.config
+
+        dotnet tool install --global Octopus.DotNet.Cli
+        dotnet-octo create-release --project g3rv4.com --deployto Dev --server "${{ steps.azureSecrets.outputs.OctopusServerUrl }}" --apiKey "${{ steps.azureSecrets.outputs.OctopusApiKey }}" --progress

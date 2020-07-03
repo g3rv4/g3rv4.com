@@ -45,3 +45,4 @@ gems:
 
 exclude:
   - "*.sh"
+  - "*.config"
