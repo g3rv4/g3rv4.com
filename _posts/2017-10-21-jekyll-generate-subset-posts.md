@@ -14,7 +14,7 @@ Aaaanyway, today I started writing an article... and noticed that generating thi
 
 I'm using [drone.io](https://drone.io/) to do continuous deployment (so that I just do a push and my server takes care of building it and invalidating cloudflare's cache), so I really don't care about how long my entire site takes to build on the server... what's really bothering me is my local time. I like to write -> check how it looks -> tweak it -> check how it looks -> tweak it... and you got the idea.
 
-So what I did is... [just another simple plugin](https://github.com/g3rv4/g3rv4.com/blob/master/_plugins/build-only-this.rb)! If this is enabled (it can be enabled on the `_config.yml` file), it checks the `_data/build_only_this.yml` file to check which posts and pages it builds... and that's it! as my [`.drone.yml`](https://github.com/g3rv4/g3rv4.com/blob/master/.drone.yml#L9-L10) removes the lines that have `#local` on them and removes `#prod:` from all the lines, I can get away with using this in my `_config.yml`:
+So what I did is... [just another simple plugin](https://github.com/g3rv4/g3rv4.com/blob/master/_plugins/build-only-this.rb)! If this is enabled (it can be enabled on the `_config.yml` file), it checks the `_data/build_only_this.yml` file to check which posts and pages it builds... and that's it! as my [`.drone.yml`](https://github.com/g3rv4/g3rv4.com/blob/1497a99bfaf466643cb839ce74526de06eadc5f1/.drone.yml#L9-L10) removes the lines that have `#local` on them and removes `#prod:` from all the lines, I can get away with using this in my `_config.yml`:
 
 ```
 build_only_this:

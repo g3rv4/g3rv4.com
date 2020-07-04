@@ -167,7 +167,7 @@ It works for me... but if this was a real project, it's an extremely brittle sol
 
 It also makes it impossible to run the release steps as they were on a particular release. If you know that release P works, you can't just reapply it. You also need to modify the version of the release scripts that get pulled to match what it was when release P was run.
 
-I guess this is the thing I liked the least about the whole experience, and [it seems like I'm not alone](https://github.com/MicrosoftDocs/vsts-docs/issues/4486).
+I guess this is the thing I liked the least about the whole experience, and [it seems like I'm not alone](https://github.com/MicrosoftDocs/azure-devops-docs/issues/4486).
 
 ## Last words
 
@@ -177,7 +177,7 @@ This is my first attempt into solving this... it's all very rough, so if you hav
 
 * You can find [my Terraform creation files](https://github.com/g3rv4/terraform-pipeline-agent).
 * You can find [PipelinesAgentManager](https://www.nuget.org/packages/PipelinesAgentManager) and [PipelinesAgentManager.Cli](https://www.nuget.org/packages/PipelinesAgentManager.Cli) on NuGet. You can also [find their code on GitHub](https://github.com/g3rv4/PipelinesAgentManager).
-* You can see the [azure-pipelines.yml file](https://github.com/g3rv4/g3rv4.com/blob/master/azure-pipelines.yml) I'm using to deploy this blog.
+* You can see the [azure-pipelines.yml file](https://github.com/g3rv4/g3rv4.com/blob/540c509e8b0d25b55b126e5eaea0389daadfb298/azure-pipelines.yml) I'm using to deploy this blog.
 * You can see the [AWS Lambda auto-approver project](https://github.com/g3rv4/TerraformAutoApply).
 * You can also check out [my deploy scripts](https://github.com/g3rv4/ReleaseScripts).
 

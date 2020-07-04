@@ -32,7 +32,7 @@ Here are the things that bugged me the most about blogger:
 
 I found a clean theme really quick (there's a lot of open sourced ones). I set up ruby locally in minutes and I had Hyde running on my machine (as the official one doesn't support Jekyll 3, I went with [this fork](https://github.com/JuanjoSalvador/hyde) instead).
 
-I migrated my old posts from blogger using [Jekyll's importer](http://import.jekyllrb.com/docs/blogger/) and that magically brought all of them into the site. They were HTML though, and I wanted to convert them as markdown... so that part was manual :S
+I migrated my old posts from blogger using [Jekyll's importer](https://import.jekyllrb.com/docs/blogger/) and that magically brought all of them into the site. They were HTML though, and I wanted to convert them as markdown... so that part was manual :S
 
 Then, I wanted to add `target="blank"` and `rel="nofollow"` to all the external links... and I found [a plugin](http://ogarkov.com/jekyll/plugins/extlinks/) that took care of that. Everything is Ruby, and I've never used it before... but it was super straightforward to [add some code to verify if a URL is valid or not](https://github.com/g3rv4/g3rv4.com/blob/master/_plugins/external-links.rb#L64). After that, if I set the `check_links` config value to `true`, I get an error on the console when a URL returns anything other than a 200 response.
 

@@ -8,7 +8,7 @@ If you have a shiny app, you don't pay for the pro version, and you want to dete
 <!--more-->
 # Why I wanted to do so
 
-[My wife](https://d4tagirl.com) is working on a [shiny](https://shiny.rstudio.com/) app... and she needed to show a [plotly](https://plot.ly/) graph to desktop users and a [ggplot2](https://ggplot2.tidyverse.org/) graph to mobile users.
+[My wife](https://d4tagirl.com) is working on a [shiny](https://shiny.rstudio.com/) app... and she needed to show a [plotly](https://plotly.com/) graph to desktop users and a [ggplot2](https://ggplot2.tidyverse.org/) graph to mobile users.
 
 # Check the user agent, he said
 

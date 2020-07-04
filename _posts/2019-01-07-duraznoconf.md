@@ -45,7 +45,7 @@ This talk was particularly cool for me... it's about a part of my identity I did
 
 [Bob Ippolito](https://twitter.com/etrepum) - [Video](https://youtu.be/w_73mWDVM0g) (in English)
 
-Bob gives a very personal recount of his experiences in technology. He's a self-taught programmer, entrepreneur, angel investor and philanthropist at [Mission Bit](https://www.missionbit.com/) that was very lucky.
+Bob gives a very personal recount of his experiences in technology. He's a self-taught programmer, entrepreneur, angel investor and philanthropist at [Mission Bit](https://www.missionbit.org/) that was very lucky.
 
 I loved how he went through all his privilege. His parent and grandfather both worked at IBM (they made the 360 María talked about earlier). His other grandfather worked on contracts for NASA and the NSA. He shows how he at 12 years old was showing other kids what a computer could do. He learned how to read using a computer.
 
