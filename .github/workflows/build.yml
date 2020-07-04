@@ -64,16 +64,9 @@ jobs:
         $xmlDoc.Save($nuspecPath)
 
         Compress-Archive -Path "$($sitePath)/*" -DestinationPath "$($basePath)/g3rv4.com.$($version).nupkg"
-
-        $nugetConfig = Get-Content nuget.config
-        $nugetConfig = $nugetConfig.Replace("{username}", $env:GITHUB_ACTOR).Replace("{password}", "${{ secrets.GITHUB_TOKEN }}")
-        Set-Content -Path nuget.config -Value $nugetConfig
     - name: Push it to GitHub
       run: curl -X PUT -u "$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}" -F package=@$BASE_PATH/g3rv4.com.$VERSION.nupkg https://nuget.pkg.github.com/g3rv4/
     - name: Create and deploy an Octopus release
       run: |
-        # nuget.config points to GitHub Packages. Delete it so that it uses nuget
-        rm nuget.config
-
         dotnet tool install --global Octopus.DotNet.Cli
-        dotnet-octo create-release --project g3rv4.com --deployto Dev --server "${{ steps.azureSecrets.outputs.OctopusServerUrl }}" --apiKey "${{ steps.azureSecrets.outputs.OctopusApiKey }}" --progress
+        dotnet-octo create-release --project g3rv4.com --releaseNumber $VERSION --deployto Dev --server "${{ steps.azureSecrets.outputs.OctopusServerUrl }}" --apiKey "${{ steps.azureSecrets.outputs.OctopusApiKey }}" --progress
