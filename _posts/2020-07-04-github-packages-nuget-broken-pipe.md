@@ -33,7 +33,7 @@ I read [this GitHub issue](https://github.com/NuGet/Home/issues/8580) and it was
 
 ```
 
-curl -X PUT -u "$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}" -F package=@$BASE_PATH/$PACKAGE.$VERSION.nupkg https://nuget.pkg.github.com/$PACKAGE/
+curl -X PUT -u "{% raw %}$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}{% endraw %}" -F package=@$BASE_PATH/$PACKAGE.$VERSION.nupkg https://nuget.pkg.github.com/$PACKAGE/
 
 ```
 
