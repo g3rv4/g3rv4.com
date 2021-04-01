@@ -58,7 +58,7 @@ The fact that the extension is open source is great. You can contribute to it, i
 
 So... if you wanted to be sure that the code you see is what's running on your machine, you could either:
 
-* Manually build the extension from GitHub and [load it unpacked](https://developer.chrome.com/extensions/getstarted#manifest)
+* Manually build the extension from GitHub and [load it unpacked](https://developer.chrome.com/docs/extensions/mv3/getstarted/#manifest)
 * Use an extension like [Chrome extension source viewer](https://chrome.google.com/webstore/detail/chrome-extension-source-v/jifpbeccnghkjeaalbbjmodiffmgedin) to view the source code of the application that's on the store (it could be minified though). Of course, that extension could lie to you (this extension could hide the malicious code of other extensions, giving you a false sense of security since… you can't trust extensions! :P)
 
 ### I've checked the extension and it's alright, so it's safe!
