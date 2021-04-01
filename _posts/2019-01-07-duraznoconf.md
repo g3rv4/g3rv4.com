@@ -116,7 +116,7 @@ Magdalena has a great story. She's a Uruguayan Entrepreneur that at some point w
 
 They made it into an incubator and started their company, they develop websites and applications for companies outside Uruguay. It's nice to see that there's an tight-knit entrepreneurship community helping each other.
 
-They got angel funds, they earned lots of prizes (like the [Cartier Women's Initiative Awards](https://www.cartierwomensinitiative.com/node/127)). She did a great work at outlining the options for other Uruguayan people that want to follow her path. She talked a bit about the difficulties of being women, and how they used those difficulties to their advantage. Is there a fund for women entrepreneurs? great, I'm going to apply to all of them and get at least something.
+They got angel funds, they earned lots of prizes (like the [Cartier Women's Initiative Awards](https://www.cartierwomensinitiative.com/node/127)). She did a great work at outlining the options for other Uruguayan people that want to follow her path. She talked a bit about the difficulties of being women, and how they used those difficulties to their advantage. "Is there a fund for women entrepreneurs? great, I'm going to apply to all of them and get at least something" was their strategy.
 
 At some point, she felt like they were too focused on their company (projects, money, funds). They weren't happy, so they started a project with social impact by launching [Gps Gay](https://www.gpsgay.com), which is a social network where the gay community have a safe space to talk about health, sexuality and identity.
 
