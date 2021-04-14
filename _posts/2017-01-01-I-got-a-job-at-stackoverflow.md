@@ -10,6 +10,21 @@ priority: 0.7
 My experience interviewing for a job at Stack Overflow (and actually getting it!). The most interesting thing is probably the quality of the blog posts I link to. On the long weeks that the whole interviewing process took place, I scraped the internet looking for other people's experiences... so here I try to "pay it forward" to my future Stackers!
 
 <!--more-->
+
+# Important Disclaimer
+
+I'm no longer working at Stack Overflow (I worked there for 4.5 years), and by the time I left, the interviewing process had suffered some modifications. Even if this article would have helped a candidate prepare for an interview, keep in mind that the company is a very different one from the one I joined.
+
+Also, while I enjoyed the interview process as a candidate, I don't think this interview process is a good one at attracting good candidates. If I were to go through this process today, I would... let's say "have feedback" for the company :)
+
+I just add this disclaimer because on a bunch of interviews I did while still there, people brought up that they read this. So:
+
+1. Don't assume this is what the Stack Overflow hiring process looks like today. You should ask about the process to your recruiter.
+2. I no longer think that "at every step of the way that the experience was super valuable for anyone interested in how great companies work". The interview process I experienced as a candidate selects for a specific type of people (that's not necessarily the best people for the job). I'm glad Stack is working on tweaking it.
+3. Stack Overflow 2021 is very different from Stack Overflow 2016 (when I joined).
+
+# Now, the original article :)
+
 Alright, this is something I've been wanting to write about for a while now. But I find it really hard to share experiences that aren't just "I had this problem and this is how I fixed it"... we'll see how this goes.
 
 First, make sure you check out the posts from my amazing coworkers talking about their experiences:
