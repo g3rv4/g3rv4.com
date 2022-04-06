@@ -43,7 +43,7 @@ I can generate 10 shares to distribute across 5 people:
 
 Then if I forget it, I can ask P1, P2 or P3 for the shares. 2 of them could have lost it and I'd still be able to reconstruct it.
 
-If my apartment caught fire and I don't have my computer and phone, I can ask P2, P2, P3 and P4 for their shares. In this scenario only 1 could have lost their shares... otherwise I wouldn't be able to get to 5.
+If my apartment caught fire and I don't have my computer and phone, I can ask P1, P2, P3 and P4 for their shares. In this scenario only 1 could have lost their shares... otherwise I wouldn't be able to get to 5.
 
 And if an attacker wanted to restore the secrets, they'd need to convince people. The beauty of this is that you can assign the shares as you deem best for your situation.
 
@@ -55,11 +55,11 @@ Also, I plan to share this with people living in different places in paper. Havi
 
 So I built a thing! and it was just putting together libraries that do the real work, but isn't that programming?
 
-My requirement is that:
+My requirements are:
 
 * It can be easily guaranteed that it doesn't make external calls, ideally without having to inspect the code
 * It will continue running for a long time
-* Assuming a browser is compromised by an extension, that shouldn't matter (I consider all extensions I didn't build insecure)
+* Assuming a browser is compromised by an extension, that shouldn't matter (I consider [all extensions I didn't build insecure]({% post_url 2018-09-18-browser-extensions-are-insecure %}))
 * Needs to work on x86 processors and on the fancy M1
 
 ## Alright, where can I see this tool?
