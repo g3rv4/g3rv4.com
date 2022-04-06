@@ -37,7 +37,7 @@ open ~/secretssplitted
 
 ```
 
-will open Finder on `~/secretssplitted` and there you'll see your PDFs. You can see examples here, I splitted a secret in 10 parts and distributed chose `3,2,2,1` for the grouping.
+will open Finder on `~/secretssplitted` and there you'll see your PDFs. You can see examples here, I splitted a secret in 10 parts and chose `3,2,2,1` for the grouping.
 
 * [File 1 (3 shares)](/public/secrets/group1.pdf)
 * [File 2 (2 shares)](/public/secrets/group2.pdf)
