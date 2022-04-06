@@ -13,7 +13,7 @@ If you know me, you'll know my math isn't strong enough to even understand how S
 
 I built a console app that lets you generate the shares and reconstruct them. You can see the code [here](https://github.com/g3rv4/SecretSplitter).
 
-Now, this is all critical information... so you'd need to trust me and trust whoever wrote SecretSharingDotNet (and all my dependencies). That's a very high ask, so I wanted to provide folks with the ability to run this without having to trust me... and I think Docker has a neat trick. When you execute a container, you can pass `--network-none`. That ensures it can't send anything to the outer world.
+Now, this is all critical information... so you'd need to trust me and trust whoever wrote SecretSharingDotNet (and all my dependencies). That's a very high ask, so I wanted to provide folks with the ability to run this without having to trust me... and I think Docker has a neat trick. When you execute a container, you can pass `--network none`. That ensures it can't send anything to the outer world.
 
 ### Requirements
 
