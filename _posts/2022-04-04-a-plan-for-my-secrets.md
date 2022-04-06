@@ -60,6 +60,7 @@ My requirement is that:
 * It can be easily guaranteed that it doesn't make external calls, ideally without having to inspect the code
 * It will continue running for a long time
 * Assuming a browser is compromised by an extension, that shouldn't matter (I consider all extensions I didn't build insecure)
+* Needs to work on x86 processors and on the fancy M1
 
 ## Alright, where can I see this tool?
 
