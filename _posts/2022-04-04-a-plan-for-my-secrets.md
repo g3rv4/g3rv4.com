@@ -1,13 +1,11 @@
 ---
 layout: post
 title: "A plan for my secrets"
-date: "2022-04-04 21:00:00 -0300"
+date: "2022-04-04 21:00:00"
 ---
 I use 1password for all my secrets. What would happen if I forgot my master key? or if both my computer and phone got stolen? Up until a couple weeks, that would have been terrible.
 
 <!--more-->
-
-# Secrets?
 
 I use 1Password for all my secrets. ALL of them. And I think you should do the same (it doesn't have to be 1Password, but _something_ that lets you use different passwords everywhere).
 
@@ -51,48 +49,18 @@ And if an attacker wanted to restore the secrets, they'd need to convince people
 
 ## How can I generate these secrets?
 
-I built a thing, obviously! but if you know me, you'll know my math isn't strong enough to even understand how Shamir's secret sharing works... so I'm using [SecretSharingDotNet](https://www.nuget.org/packages/SecretSharingDotNet/).
+I searched for tools, and I found [this nice and offline tool](https://iancoleman.io/shamir/) that does what I want. It had a couple downsides, the most important one is that any extensions would be able to see what I'm writing there (or what people that need to reconstruct the secret have). I'd also need to store the html somewhere so that if the site goes down I can still use it.
 
-I built a console app that lets you generate the shares and reconstruct them. You can see the code [here](https://github.com/g3rv4/SecretSplitter).
+Also, I plan to share this with people living in different places in paper. Having to type back all these strings (that get really long) is not awesome.
 
-Now, this is all critical information... so you'd need to trust me and trust whoever wrote SecretSharingDotNet (and all my dependencies). That's a very high ask, so I wanted to provide folks with the ability to run this without having to trust me... and I think Docker has a neat trick. When you execute a container, you can pass `--network-none`. That ensures it can't send anything to the outer world.
+So I built a thing! and it was just putting together libraries that do the real work, but isn't that programming?
 
-### Requirements
+My requirement is that:
 
-* Docker
+* It can be easily guaranteed that it doesn't make external calls, ideally without having to inspect the code
+* It will continue running for a long time
+* Assuming a browser is compromised by an extension, that shouldn't matter (I consider all extensions I didn't build insecure)
 
-### How do I run it?
+## Alright, where can I see this tool?
 
-So if you wanted to generate shares / reconstruct a secret **in a way that I can't send those to myself** you can run:
-
-```
-
-docker run --rm -v ~/secretssplitted:/var/output --network none -ti g3rv4/secretsplitter
-
-```
-
-And after that you'll see a prompt that lets you split a secret or put several pieces back together. If you chose to create one, running
-
-```
-
-open ~/secretssplitted
-
-```
-
-will open Finder on `~/secretssplitted` and there you'll see your PDFs. You can see examples here, I splitted a secret in 10 parts and distributed chose `3,2,2,1` for the grouping.
-
-* [File 1 (3 shares)](/public/secrets/group1.pdf)
-* [File 2 (2 shares)](/public/secrets/group2.pdf)
-* [File 3 (2 shares)](/public/secrets/group3.pdf)
-* [File 4 (2 shares)](/public/secrets/group4.pdf)
-* [File 5 (1 share)](/public/secrets/group5.pdf)
-
-## Recomposing a secret
-
-You can run exactly the same command (or leave out the `-v` part if you fancy that)... and that will ask you how many parts you have (you'll need at least 5 on my example) and it will ask you to type it.
-
-Now... since we live in 2022, you can point your camera to the QRs, copy the content and paste it on your computer. If you use iOS + macOS, that works automatically (magic!).
-
-## Parting thoughts
-
-I will be revising this post, adding instructions for Windows (they're mostly the same, but mounting the volume is a bit different). I just wanted to publish this (it's been almost 2 years since I published something here) so that if I drop dead tonight my wife knows how the heck to use these wierd QR codes.
+On my [next blog post!]({% post_url 2022-04-05-using-shamir-secret-sharing %})
