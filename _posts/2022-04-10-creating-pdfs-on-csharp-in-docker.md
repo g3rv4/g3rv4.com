@@ -79,6 +79,14 @@ else
 }
 
 await using var browser = await Puppeteer.LaunchAsync(browserLauchOptions);
+var page = await browser.NewPageAsync();
+await page.GoToAsync(@"data:text/html,<html>
+    <body>
+        <h1>Hello world!</h1>
+        <p>This is awesome</p>
+    </body>
+</html>");
+await page.PdfAsync(pathToPdfFile);
 
 ```
 
