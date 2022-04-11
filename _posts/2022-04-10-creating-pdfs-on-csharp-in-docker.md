@@ -11,7 +11,7 @@ If you tried to generate PDFs on C#, you've either paid a lot or ended up super 
 
 Now... we have [Puppetter Sharp](https://www.puppeteersharp.com/) which is an amazing library to automate Chrome. This amazing library can automate lots of things but it can also use Chrome to build PDFs.
 
-If you generate HTML, you can use Puppetteer Sharp to get you a PDF. How? here's how (modified from [their docs](https://www.puppeteersharp.com/api/index.html))
+If you generate HTML, you can use Puppetteer Sharp to get you a PDF. How? here's how (modified from [the official docs](https://www.puppeteersharp.com/api/index.html))
 
 ```c#
 
