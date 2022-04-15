@@ -33,7 +33,7 @@ await page.PdfAsync(pathToPdfFile);
 
 You can get fancy, you can use css to style your content, add images... do anything. In the end, Chrome will end up saving a PDF.
 
-## This is all fine, but what if I run my site on a docker container?
+## This is all fine, but what if I run my app on a docker container?
 
 If you run it in a docker container, this won't work. I wanted to run my stuff on alpine, on the runtime Microsoft ships... and there are dependencies that make the whole thing break hard. I found [this article Darío wrote about it](https://www.hardkoded.com/blog/puppeteer-sharp-docker) but I wanted to use a newer image (and understand what I was doing).
 
@@ -92,4 +92,4 @@ await page.PdfAsync(pathToPdfFile);
 
 And that's it! I'm able to build PDFs con C# inside of Docker, both for x86 and ARM architectures.
 
-Now... how can I publish multiple architecture images under the same name from GitHub? that's what I'll blog about next.
+Now... how can I publish multiple architecture images under the same name from GitHub? I'm glad you asked, that's what [my next article is about]({% post_url 2022-04-14-building-multiarch-docker-images-github-actions %})
