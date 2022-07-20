@@ -1,7 +1,8 @@
 jekyll
 run.rb
-version.json
+_data/version.json
 .sass-cache/
+_packages/
 
 # Ignore docs files
 _gh_pages

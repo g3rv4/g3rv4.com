@@ -8,69 +8,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0 # get entire git tree, required for nerdbank gitversioning
     - uses: Azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
     - uses: Azure/get-keyvault-secrets@v1.1
       with:
         keyvault: "ActionsBuild"
-        secrets: 'OctopusServerUrl, OctopusApiKey'
+        secrets: 'OctopusServerUrl, OctopusApiKey, NuGetEndpoint'
       id: azureSecrets
-
-    - name: Set variables
+    - name: Add NuGet source
       shell: pwsh
       run: |
-        $basePath = Pwd
-        $sitePath = Join-Path $basePath _site
-        $nuspecPath = Join-Path $basePath g3rv4.com.nuspec
-
-        [xml]$xmlDoc = Get-Content $nuspecPath
-        $versionElement = $xmlDoc['package']['metadata']['version']
-        $version = [version]$versionElement.InnerText
-        $versionWithoutHash = [version]"$($version.Major).$($version.Minor).$($env:GITHUB_RUN_NUMBER)"
-        $newVersion = "$($versionWithoutHash)+$($env:GITHUB_SHA.SubString(0, 7))"
-
-        if ($env:GITHUB_ENV) {
-          Write-Output "BASE_PATH=$basePath" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
-          Write-Output "SITE_PATH=$sitePath" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
-          Write-Output "VERSION=$newVersion" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
-          Write-Output "VERSION_WITHOUT_HASH=$versionWithoutHash" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
-        }
-    - name: Build site
+        nuget sources Add -Name MySource -Source ${{ steps.azureSecrets.outputs.NuGetEndpoint }}
+        Register-PSRepository -Name MySource -SourceLocation ${{ steps.azureSecrets.outputs.NuGetEndpoint }} -InstallationPolicy Trusted
+        Install-Module BuildScripts -Repository MySource
+    - name: Build project
       shell: pwsh
-      run: |
-        sed -i '/#local/d' _config.yml
-        sed -i 's/#prod://g' _config.yml
-
-        $pwd = pwd
-        $uid = sh -c 'id -u'
-        $gid = sh -c 'id -g'
-
-        $env:VERSION | ConvertTo-Json | Out-File "_data/version.json"
-
-        docker run --rm -v "$($pwd):/var/site-content" g3rv4/blog-builder bash -c "/root/.rbenv/shims/jekyll build && chown -R $($uid):$($gid) /var/site-content"
-    - name: Package it
-      shell: pwsh
-      run: |
-        $basePath = $env:BASE_PATH
-        $sitePath = $env:SITE_PATH
-        $version = $env:VERSION
-        $versionWithoutHash = $env:VERSION_WITHOUT_HASH
-
-        cp "$($basePath)/g3rv4.com.nuspec" "$($sitePath)/g3rv4.com.nuspec"
-
-        $nuspecPath = Join-Path $sitePath g3rv4.com.nuspec
-
-        [xml]$xmlDoc = Get-Content $nuspecPath
-        $metadataElement = $xmlDoc['package']['metadata']
-        $metadataElement['repository'].SetAttribute("commit", $env:GITHUB_SHA)
-        $metadataElement['version'].InnerText = $versionWithoutHash
-        $xmlDoc.Save($nuspecPath)
-
-        Compress-Archive -Path "$($sitePath)/*" -DestinationPath "$($basePath)/g3rv4.com.$($version).nupkg"
+      run: ./build.ps1
     - name: Push it to GitHub
-      run: curl -X PUT -u "$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}" -F package=@$BASE_PATH/g3rv4.com.$VERSION.nupkg https://nuget.pkg.github.com/g3rv4/
+      run: curl -X PUT -u "$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}" -F package=@_packages/g3rv4.com.$VERSION.nupkg https://nuget.pkg.github.com/g3rv4/
     - name: Create and deploy an Octopus release
       run: |
         dotnet tool install --global Octopus.DotNet.Cli
-        dotnet-octo create-release --project g3rv4.com --releaseNumber $VERSION --package g3rv4.com:$VERSION_WITHOUT_HASH --deployto Dev --server "${{ steps.azureSecrets.outputs.OctopusServerUrl }}" --apiKey "${{ steps.azureSecrets.outputs.OctopusApiKey }}" --progress
+        dotnet-octo create-release --project g3rv4.com --releaseNumber $VERSION --deployto Dev --server "${{ steps.azureSecrets.outputs.OctopusServerUrl }}" --apiKey "${{ steps.azureSecrets.outputs.OctopusApiKey }}" --progress
