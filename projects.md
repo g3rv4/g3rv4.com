@@ -5,6 +5,11 @@ order: 1
 ---
 Here are some projects that make me proud :)
 
+## SecretSplitter
+Code: [github](https://github.com/g3rv4/SecretSplitter) - On my blog: [motivation]({% post_url 2022-04-04-a-plan-for-my-secrets %}) - [announcement]({% post_url 2022-04-05-using-shamir-secret-sharing %})
+
+I was thinking about [what to do with my secrets]({% post_url 2022-04-04-a-plan-for-my-secrets %}) if I lost access to my devices or if I just forgot my 1password master password. I built SecretSplitter to do that easily.
+
 ## OnChrome
 Site: [onchrome.gervas.io](https://onchrome.gervas.io) - Code: [github](https://github.com/g3rv4/OnChrome) - On my blog: [announcement]({% post_url 2019-06-03-how-to-migrate-to-firefox %})
 
