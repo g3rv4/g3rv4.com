@@ -10,7 +10,7 @@ Injecting javascript into their website is a no-no according to them. So I unshi
 
 <!--more-->
 
-**UPDATE Sept 14th 2018:** After talks with folks from Slack and a rename... Refined (fka Taut) (fka BetterSlack) is now live back!!! You can find on Chrome, Firefox and Opera. See more details at [refined.chat](https://refined.chat).
+**UPDATE Sept 14th 2018:** After talks with folks from Slack and a rename... Refined (fka Taut) (fka BetterSlack) is now live back!!! You can find on Chrome, Firefox and Opera. See more details at [refined.gervas.io](https://refined.gervas.io).
 
 I feel like I need an un-unshipping gif now.
 

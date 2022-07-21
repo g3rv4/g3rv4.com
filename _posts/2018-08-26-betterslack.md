@@ -12,7 +12,7 @@ I built a Chrome extension that makes Slack even better :) It was called BetterS
 
 **UPDATE:** The extension was unpublished from the chrome web store following [Slack's Legal Team request]({% post_url 2018-08-29-bye-bye-betterslack %}).
 
-**UPDATE Sept 14th 2018:** After talks with folks from Slack and a rename... Refined (fka Taut) (fka BetterSlack) is now live back!!! You can find on Chrome, Firefox and Opera. See more details at [refined.chat](https://refined.chat).
+**UPDATE Sept 14th 2018:** After talks with folks from Slack and a rename... Refined (fka Taut) (fka BetterSlack) is now live back!!! You can find on Chrome, Firefox and Opera. See more details at [refined.gervas.io](https://refined.gervas.io).
 
 ---
 

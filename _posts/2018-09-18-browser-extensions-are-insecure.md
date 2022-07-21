@@ -8,7 +8,7 @@ While working on Refined (my browser extension to personalize Slack) I realized 
 
 <!--more-->
 
-On Sept 14th I renamed BetterSlack to Taut (and later to [Refined](https://refined.chat)) and shipped it to the Chrome Web Store. The extension had been live for 2 or 3 days and then it was unpublished for a couple weeks... but users continued using it. On this new version, I was including a couple bugfixes, a new feature, the rename and a warning notice. That looks like this:
+On Sept 14th I renamed BetterSlack to Taut (and later to [Refined](https://refined.gervas.io)) and shipped it to the Chrome Web Store. The extension had been live for 2 or 3 days and then it was unpublished for a couple weeks... but users continued using it. On this new version, I was including a couple bugfixes, a new feature, the rename and a warning notice. That looks like this:
 
 ![Taut warning](/public/images/tautWarning.png)
 
@@ -101,7 +101,7 @@ And... there are more examples of extensions doing bad stuff:
 
 ## If after reading this you still want to install Refined...
 
-Refined lets you personalize your Slack experience by doing [a bunch of things](https://github.com/g3rv4/Refined/blob/master/README.md) that I find super useful. You can get it at [refined.chat](https://refined.chat).
+Refined lets you personalize your Slack experience by doing [a bunch of things](https://github.com/g3rv4/Refined/blob/master/README.md) that I find super useful. You can get it at [refined.gervas.io](https://refined.gervas.io).
 
 I built it, I won't do anything bad with it... but in the end, you need to trust me (and after all, that's exactly what I'd say if my end game was actually stealing your info).
 

@@ -31,7 +31,7 @@ extlinks:
   check_links: false #local
 #prod:  check_links: true
   check_exclude: ['twitter.com', 'youtu.be', 'developer.apple.com', 'www.linkedin.com', 'tools.ietf.org', 'goberoi.com', 'stories.moma.org', 'slack.engineering']
-  rel_exclude: ['refined.chat', 'onchro.me']
+  rel_exclude: ['refined.gervas.io', 'onchrome.gervas.io']
 
 build_only_this:
   enabled: true #local

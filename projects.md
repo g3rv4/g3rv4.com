@@ -6,14 +6,14 @@ order: 1
 Here are some projects that make me proud :)
 
 ## OnChrome
-Site: [onchro.me](https://onchro.me) - Code: [github](https://github.com/g3rv4/OnChrome) - On my blog: [announcement]({% post_url 2019-06-03-how-to-migrate-to-firefox %})
+Site: [onchrome.gervas.io](https://onchrome.gervas.io) - Code: [github](https://github.com/g3rv4/OnChrome) - On my blog: [announcement]({% post_url 2019-06-03-how-to-migrate-to-firefox %})
 
 It's a browser extension for Firefox so that users can choose which urls will be opened on Chrome. When the user visits that url on Firefox (either by writing its url on the address bar or by clicking a link) the tab is closed and Chrome opened.
 
 It uses [native messaging](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging), so I had to develop a native application to open Chrome. I chose Go because it had 0 dependencies. Initially it supports MacOS and Windows 64bits.
 
 ## Refined - a tool for Slack
-Site: [refined.chat](https://refined.chat) - Code: [github](https://github.com/g3rv4/Refined) - On my blog: [announcement]({% post_url 2018-08-26-betterslack %})
+Site: [refined.gervas.io](https://refined.gervas.io) - Code: [github](https://github.com/g3rv4/Refined) - On my blog: [announcement]({% post_url 2018-08-26-betterslack %})
 
 This is a browser extension (for Chrome, Firefox and Opera) that lets you personalize your Slack experience. Check [its readme](https://github.com/g3rv4/Refined/blob/master/README.md) for an updated list of features or check out [this 4 minutes video](https://www.youtube.com/watch?v=gyZR-5_JVqQ) where I demo it.
 

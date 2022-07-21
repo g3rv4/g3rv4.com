@@ -9,7 +9,7 @@ I've been wanting to migrate from Chrome to Firefox for a while now... but I use
 
 <!--more-->
 
-**TL;DR**: I wrote [OnChrome](https://onchro.me), a Firefox extension that opens the urls you want on Chrome. To use it, make sure you [install the native app](https://onchro.me/native-applications). Why a native app? well, keep on reading :P
+**TL;DR**: I wrote [OnChrome](https://onchrome.gervas.io), a Firefox extension that opens the urls you want on Chrome. To use it, make sure you [install the native app](https://onchrome.gervas.io/native-applications). Why a native app? well, keep on reading :P
 
 In case you missed it, Google is planning to change what extensions can do [with the manifest v3](https://docs.google.com/document/d/1nPu6Wy4LWR66EFLeYInl3NzzhHzc-qnk4w4PX-0XMw8/edit#). A bunch of things are great (I really really think that [as things stand, extensions are really dangerous]({% post_url 2018-09-18-browser-extensions-are-insecure %})) but the fact that [they're severely limiting how Ad Blockers can do their thing](https://bugs.chromium.org/p/chromium/issues/detail?id=896897&desc=2#c23) is a bit worrysome to me.
 
@@ -68,7 +68,7 @@ Total time? a night that I went to bed at 3am + a Sunday evening for the Go stuf
 Installing the extension should be fairly straightforward (although a bit more involved than installing an extension that doesn't use native messaging).
 
 1. Install the [Firefox extension from their store](https://addons.mozilla.org/en-US/firefox/addon/onchrome/)
-2. Download [the native application](https://onchro.me/native-applications) for your environment and follon the instructions on that page
+2. Download [the native application](https://onchrome.gervas.io/native-applications) for your environment and follon the instructions on that page
 
 And that should be it! Here you can see it working:
 
@@ -89,6 +89,6 @@ To completely remove the extension, the application, and any traces of it you sh
 
 I'm going to probably add things like "Open on Chrome" by right-clicking on a link... but other than that, it does exactly what I wanted it to :)
 
-You can find its source code and more stuff at [onchro.me](https://onchro.me).
+You can find its source code and more stuff at [onchrome.gervas.io](https://onchrome.gervas.io).
 
 Have comments? tweet me at @g3rv4!
