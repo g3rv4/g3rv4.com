@@ -5,31 +5,45 @@ on:
 
 jobs:
   build:
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+      deployments: write
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0 # get entire git tree, required for nerdbank gitversioning
-    - uses: Azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
-    - uses: Azure/get-keyvault-secrets@v1.1
-      with:
-        keyvault: "ActionsBuild"
-        secrets: 'OctopusServerUrl, OctopusApiKey, NuGetEndpoint'
-      id: azureSecrets
     - name: Add NuGet source
       shell: pwsh
       run: |
-        nuget sources Add -Name MySource -Source ${{ steps.azureSecrets.outputs.NuGetEndpoint }}
-        Register-PSRepository -Name MySource -SourceLocation ${{ steps.azureSecrets.outputs.NuGetEndpoint }} -InstallationPolicy Trusted
+        nuget sources Add -Name MySource -Source https://proget.gervas.io/nuget/mine/
+        Register-PSRepository -Name MySource -SourceLocation https://proget.gervas.io/nuget/mine/ -InstallationPolicy Trusted
         Install-Module BuildScripts -Repository MySource
     - name: Build project
       shell: pwsh
       run: ./build.ps1
-    - name: Push it to GitHub
-      run: curl -X PUT -u "$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}" -F package=@_packages/g3rv4.com.$VERSION.nupkg https://nuget.pkg.github.com/g3rv4/
-    - name: Create and deploy an Octopus release
+    - name: Archive artifact
+      shell: sh
       run: |
-        dotnet tool install --global Octopus.DotNet.Cli
-        dotnet-octo create-release --project g3rv4.com --releaseNumber $VERSION --deployto Dev --server "${{ steps.azureSecrets.outputs.OctopusServerUrl }}" --apiKey "${{ steps.azureSecrets.outputs.OctopusApiKey }}" --progress
+        tar \
+          --dereference --hard-dereference \
+          --directory "_site/" \
+          -cvf "$RUNNER_TEMP/artifact.tar" \
+          --exclude=.git \
+          --exclude=.github \
+          .
+      env:
+        INPUT_PATH: ${{ inputs.path }}
+    - name: Publish artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: github-pages
+        path: ${{ runner.temp }}/artifact.tar
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v1
