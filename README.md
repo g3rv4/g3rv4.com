@@ -4,7 +4,7 @@ This is the code of my blog, hosted at [g3rv4.com](https://g3rv4.com). Changes h
 
 ## This site uses
 * [Jekyll](https://jekyllrb.com/)
-* [The Hyde template](http://hyde.getpoole.com)
+* [The Hyde template](https://hyde.getpoole.com/)
 * [The jekyll-datapage_gen plugin](https://github.com/avillafiorita/jekyll-datapage_gen)
 * [The Jekyll ExtLinks plugin](http://ogarkov.com/jekyll/plugins/extlinks/) (with a few tweaks)
 

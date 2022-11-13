@@ -12,7 +12,7 @@ Since the main goal of Refined is to make my life easier, I'm stopping its publi
 
 This is a bit of a Déjà vu... almost a year ago I was writing [Bye bye BetterSlack]({% post_url 2018-08-29-bye-bye-betterslack %}).
 
-Recently Slack shipped their new [and better version](https://slack.engineering/rebuilding-slack-on-the-desktop-308d6fe94ae4) both to their apps and to the web.
+Recently Slack shipped their new [and better version](https://slack.engineering/rebuilding-slack-on-the-desktop/) both to their apps and to the web.
 
 I haven't verified if the web is faster, but I have no reasons to believe it isn't. What I do know is that in addition to making it faster, they did other changes that make it harder for extensions to interact with it:
 

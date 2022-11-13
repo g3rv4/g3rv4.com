@@ -48,7 +48,7 @@ What this change does is telling your router to resolve `local.mse.com` to your 
 #### If you don't have a router with `DNSMasq`
 You could use any DNS server (and you could skip the docker setup) but IMO nothing beats DNSMasq's simplicity even if it's running as a docker container.
 
-* [Install docker](https://www.docker.com/get-started)
+* [Install docker](https://www.docker.com/get-started/)
 * Ensure that your Windows firewall accepts incoming connections on the 53/tcp and 53/udp ports on the `192.168.1.144` interface.
 * Run [my image](https://hub.docker.com/r/g3rv4/dnsmasq/) (forked from [andyshinn/dnsmasq](https://hub.docker.com/r/andyshinn/dnsmasq/)) starting `DNSMasq` on a docker container
 ```

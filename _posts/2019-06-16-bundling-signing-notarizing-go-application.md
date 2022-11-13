@@ -27,7 +27,7 @@ My application consists of 2 terminal executables built with Go. Nothing more an
 
 # What does it take for Gatekeeper to be happy?
 
-Apple has a [notarization process](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution) where you send them your application, they run some tests on it and emit a token that can be used to verify that they didn't find anything wrong with your app.
+Apple has a [notarization process](https://developer.apple.com/documentation/security/notarizing_macos_software_before_distribution) where you send them your application, they run some tests on it and emit a token that can be used to verify that they didn't find anything wrong with your app.
 
 Then, you can stamp that token so that users of your app can verify it's legit (and even if they are offline, have their Macs run your software).
 

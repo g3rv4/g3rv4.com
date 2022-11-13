@@ -51,7 +51,7 @@ Alright, now that you've read them, I don't think I have a lot to add, so what f
 On June 30th, the company I was happily working for entered into "maintenance mode". That meant we wouldn't have a development team anymore and all the work we'd do would be focused on keeping our sites alive to fulfill existing contracts. Fortunately, I was offered a retainer to take care of that... but this was the first time in my adult life I didn't have a full time job (and the first time actively *looking* for one).
 
 ## The job search
-I started applying for jobs mainly via [Stack Overflow Jobs](https://stackoverflow.com/jobs) (the product I work on now). I managed to get some interviews, I made it to the last round at HotJar, but in the end they went with somebody else.
+I started applying for jobs mainly via Stack Overflow Jobs (RIP) (the product I worked on when I started at Stack Overflow). I managed to get some interviews, I made it to the last round at HotJar, but in the end they went with somebody else.
 
 I wasn't too concerned about my situation though, my goal was to make some lemonade and end up working in a job I loved even more, so I was quite selective when applying. I put a lot of work on each cover letter I sent (if I wasn't able to write a cover letter that made me happy, I would just avoid applying). I wanted my potential employers to realize how much I **love** what I do, how much I could love that position and why they could love me back. It was of course about technology, but it was more about feelings. Why? because what I work on is a big part of my day to day happiness. Because I will end up working way more than 40 hours per week, as I keep on thinking about work when I sleep, when I run, when I travel.
 

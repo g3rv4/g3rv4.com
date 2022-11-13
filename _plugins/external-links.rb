@@ -61,30 +61,6 @@ module Jekyll
         # If this is a local link don't change it
         next unless a.get_attribute('href') =~ /\Ahttp/i
 
-        if config['check_links'] and not @@already_checked.include?(a.get_attribute('href'))
-          @@already_checked << a.get_attribute('href')
-
-          Process.fork do
-            begin
-              uri = URI(a.get_attribute('href'))
-              unless config['check_exclude'].include?(uri.host)
-                # verify that the link is good
-                r = Net::HTTP.get_response(uri)
-
-                if r.code == "403" and uri.contains("apple")
-                  # ugh, apple breaks the validator
-                elsif r.code != "200" and r.code != "202" and r.code != "302"
-                  print 'ERROR! Returned code ' + r.code + ' in file ' + page["path"] + ' when linking to ' + a.get_attribute('href') + "\n"
-                else
-                  # print 'OK!'
-                end
-              end
-            rescue
-              print 'ERROR! File ' + page["path"] + ' points to ' + a.get_attribute('href') + "\n"
-            end
-          end
-        end
-
         attributes.each do |attr, value|
           if attr.downcase == 'rel'
             # If there's a rel already don't change it

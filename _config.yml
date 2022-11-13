@@ -28,8 +28,6 @@ excerpt_separator: <!--more-->
 
 extlinks:
   attributes: {rel: nofollow, target: _blank}
-  check_links: true #local
-#prod:  check_links: false
   check_exclude: ['twitter.com', 'youtu.be', 'developer.apple.com', 'www.linkedin.com', 'tools.ietf.org', 'goberoi.com', 'stories.moma.org', 'slack.engineering']
   rel_exclude: ['refined.gervas.io', 'onchrome.gervas.io']
 

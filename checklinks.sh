@@ -1,0 +1,2 @@
+#!/bin/bash
+./mlc _site --ignore-links "/*" --ignore-links "https://www.linkedin.com/*" --ignore-links "https://www.sec.gov/*" --ignore-links "https://stackapps.com/a/*" --ignore-links "https://stackoverflow.com/a/*" --ignore-links "https://stackoverflow.com/q/*" --ignore-links "https://security.stackexchange.com/q/*" --ignore-links "https://youtu.be/*" --ignore-links "https://meta.stackoverflow.com/q/*"

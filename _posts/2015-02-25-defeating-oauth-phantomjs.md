@@ -24,7 +24,7 @@ My [first approach](https://github.com/g3rv4/hours/blob/76f9c227268ac911d2417ff1
 
 So, that's where I remembered I had read about [PhantomJS](https://phantomjs.org/) and how cool I thought it sounded (I've built some scrapers and having to figure out what a JS could be doing is one of the most painful things I've worked on). PhantomJS is just a headless browser... it means that it has no window but it processes everything as a regular browser would. It then lets you interact with the different elements programatically. This seems like the exact challenge it's able to solve... javascript, redirections and redirections done through javascript. I would have my system use PhantomJS to complete all the steps in the authentication... Spoiler alert: it works great.
 
-This particular API implements the [Authorization Code Grant flow](https://tools.ietf.org/html/draft-ietf-oauth-v2-31#section-4.1). In plain English, this is how it's meant to work:
+This particular API implements the [Authorization Code Grant flow](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-31#section-4.1). In plain English, this is how it's meant to work:
 
 1. You should register your app and provide a redirection url. That's where your users would land once they complete the registration process. They give you a `client_id` and a `client_secret`
 2. You show a link to your user saying "Log in with TimeDoctor" that points to `https://webapi.timedoctor.com/oauth/v2/auth?client_id=<YOUR_CLIENT_ID>&response_type=code&redirect_uri=<REDIRECT_URI>`
