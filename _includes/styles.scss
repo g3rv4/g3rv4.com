@@ -388,7 +388,7 @@ body {
     }
     .isLeft {
       float: left;
-      width: 47%;
+      width: 60%;
       @include box-sizing(border-box);
       @include respond-to(800) {
         width: 100%;
@@ -445,7 +445,7 @@ body {
     }
     .isRight {
       float: right;
-      width: 47%;
+      width: 34%;
       @include box-sizing(border-box);
       @include respond-to(800) {
         width: 100%;
