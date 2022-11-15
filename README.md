@@ -11,7 +11,7 @@ This is the code of my blog, hosted at [g3rv4.com](https://g3rv4.com). Changes h
 ## Author
 
 **Gervasio Marchand**
-- <https://twitter.com/g3rv4>
+- <https://hachyderm.io/@g3rv4>
 - <https://github.com/g3rv4>
 
 ## License
