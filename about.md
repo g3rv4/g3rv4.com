@@ -60,4 +60,4 @@ I learned a ton and worked on many interesting projects, helping some big custom
 On March 29th 2021 (after 4 years, 6 months and 10 days) I left Stack Overflow for the next thing in my career: [Process Street](https://www.process.st). There I will join a small team where I will be able to touch a little bit of everything (I really like using as many hats as there are available) while trying to contribute to what I think can be a revolution in the way companies do processes. That's the goal at least, as I expect to be writing pretty bad Scala code in my first days.
 
 ## So, that's my story
-Oh, and I run. I love running, but that's not probably why you're here :) nice to meet you and [mention me on mastodon](https://hachyderm.io/@g3rv4) if you have any comments.
+Oh, and I run. I love running, but that's not probably why you're here :) nice to meet you and [mention me on mastodon](https://mastodonte.tech/@g3rv4) if you have any comments.
