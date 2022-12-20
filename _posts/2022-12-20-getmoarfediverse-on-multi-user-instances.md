@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "GetMoarFediverse on multi-user Mastodon instances"
-date: "2022-12-20 21:00:00"
+date: "2022-12-20 00:00:00"
 ---
 I moved to Mastodon and built some tools for it. In this post, I made one smarter :) If you're a #mastoAdmin of a small instance, this post is for you!
 
@@ -27,3 +27,13 @@ It was [quite straightforward to implement](https://github.com/g3rv4/GetMoarFedi
 ```
 
 Then GetMoarFediverse will index content your users are interested in. I recommend you create a read-only user for this, and if you want to restrict its privileges, it needs access to the `tag_follows` and `tags` tables.
+
+You can create a `mastodon_read`read only user with access to those tables with these commands:
+
+```
+CREATE USER mastodon_read WITH PASSWORD 'password';
+GRANT CONNECT ON DATABASE mastodon_production TO mastodon_read;
+GRANT USAGE ON SCHEMA public TO mastodon_read;
+GRANT SELECT ON tag_follows TO mastodon_read;
+GRANT SELECT ON tags TO mastodon_read;
+```
