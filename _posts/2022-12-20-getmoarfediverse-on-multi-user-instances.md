@@ -21,7 +21,7 @@ It was [quite straightforward to implement](https://github.com/g3rv4/GetMoarFedi
 {
     "FakeRelayUrl": "https://fakerelay.gervas.io",
     "FakeRelayApiKey": "1TxL6m1Esx6tnv4EPxscvAmdQN7qSn0nKeyoM7LD8b9m+GNfrKaHiWgiT3QcNMUA+dWLyWD8qyl1MuKJ+4uHA==",
-    "MastodonPostgresConnectionString": "Host=myserver;Username=mylogin;Password=mypass;Database=mydatabase",
+    "MastodonPostgresConnectionString": "Host=myserver;Username=mastodon_read;Password=password;Database=mastodon_production",
     "Instances": [ "hachyderm.io", "mastodon.social" ]
 }
 ```
