@@ -52,6 +52,12 @@ find /etc/netplan -type f -name "*.yaml" -exec yq e '.network.ethernets.eth0.nam
 netplan apply;
 ```
 
+And we gotta disable cloud-init from messing up with our DNSs:
+
+```
+yq e  -n '.network.config = "disabled"' > /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg
+```
+
 ## Install Tailscale
 
 And that's it! it can now connect to IPv4 hosts! At this point, I install tailscale. I want to enable it as an exit node and avoid the DNS changes (because of... reasons)
