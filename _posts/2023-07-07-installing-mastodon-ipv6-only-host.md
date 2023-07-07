@@ -32,7 +32,7 @@ The way it works is:
 * When an IPv6 host does a request to a domain that only has an IPv4 host, the DNS64 returns an IPv6 on the reserved range
 * The host sends the request to the mapped range to NAT64, which is a machine that has both an IPv6 and an IPv4. It then forwards the request using its IPv4 (that's the IP that the recipient will see) and then returns it to the IPv6 host. It's doing NAT :)
 
-Hetzner doesn't have DNS64/NAT64 available, but fortunately [nat64.net](https://nat64.net/). Just by setting the nameservers to those three values, your IPv6 host gains IPv4 connectivity.
+Hetzner doesn't provide a DNS64/NAT64 service, but fortunately [nat64.net](https://nat64.net/) exists. Just by setting the nameservers to those three values, your IPv6 host gains IPv4 connectivity. They have 3 boxes, each with its own IPv6 range, and they use that for the prefix.
 
 In order to change the nameservers, we have to change a yaml file at `/etc/netplan`. And we can use `yq` to edit it on the console. Now... `yq` is downloaded from github.com, which only has IPv4... so in order to access the IPv4 network, we need to download from a site that only has IPv4 addresses. Fortunately, we can do a little trick... since we know the IPv6 is just a prefix + the IPv4 address, we can do exactly that.
 
