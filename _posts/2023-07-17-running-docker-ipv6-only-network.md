@@ -85,7 +85,7 @@ ipv6_68_default="${ipv6%%::*}:1000::/68"
 ipv6_68_new_networks="${ipv6%%::*}:2000::/68"
 
 # Generate /etc/docker/daemon.json
-cat <<EOF > /etc/docker/daemon.json
+cat <<EOF | sudo tee /etc/docker/daemon.json >/dev/null
 {
   "ipv6": true,
   "fixed-cidr-v6": "$ipv6_68_default",
@@ -98,7 +98,7 @@ cat <<EOF > /etc/docker/daemon.json
 }
 EOF
 
-systemctl restart docker
+sudo systemctl restart docker
 ```
 
 ### Use docker!
