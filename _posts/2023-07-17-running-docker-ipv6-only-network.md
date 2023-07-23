@@ -68,6 +68,8 @@ So what I'm going to do is:
 1. Set `2001:0db8:2a01:4f8:1000::/68` as the default network range. It means the default network will have addresses from `2001:0db8:2a01:04f8:1000:0000:0000:0000` to `2001:0db8:2a01:04f8:1fff:ffff:ffff:ffff`
 2. Add a default address pool that's `2001:0db8:2a01:4f8:2000::/68`, but so that new networks take /80 ranges. In a /68 range there are 4096 /80 ranges, so that's more networks that I'll need.
 
+Another small detail: if you don't specify the dns on daemon.json, it won't use the host's information when running in a docker swarm (it's not needed if you don't use a swarm though).
+
 Now, this code is very hacky. I couldn't find a reliable way of manipulating IPv6 ranges on bash so instead of requiring another tool, I'm just doing something that works for my use case.
 
 ```
@@ -94,7 +96,8 @@ cat <<EOF | sudo tee /etc/docker/daemon.json >/dev/null
   "default-address-pools":[
     {"base": "172.31.0.0/16", "size": 24},
     {"base": "$ipv6_68_new_networks", "size": 80}
-  ]
+  ],
+  "dns": ["2a00:1098:2c::1", "2a01:4f9:c010:3f02::1", "2a00:1098:2b::1"]
 }
 EOF
 
