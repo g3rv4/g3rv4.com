@@ -55,47 +55,29 @@ su - ${USER};
 
 ### Setting up Docker's networks
 
-And now comes the fun part. The first thing I tried was using the `2001:0db8::` address range (that's what's used on Docker's documentation), and it worked! but then I realized that was a reserved range for documentation. Then [ULA addresses](https://en.wikipedia.org/wiki/Unique_local_address) sounded like the right thing, but for some reason that didn't work.
+And now comes the fun part. The first thing I tried was using the `2001:0db8::` address range (that's what's used on Docker's documentation), and it worked! but then I realized that was a reserved range for documentation. Then [ULA addresses](https://en.wikipedia.org/wiki/Unique_local_address) sounded like the right thing... but if there's only an ULA address and an IPv4, then linux will send the traffic through IPv4. You'd be able to change `gai.conf`, but that doesn't apply to alpine containers. Fun? yeah... there are more details [here](https://chameth.com/ipv6-docker-routing/).
 
-Then, I used the actual server range... Hetzner assigns a /64 IPv6 range. We have to tell Docker the network new containers are going to have, and we also have to specify the network ranges new networks will have (docker compose creates them).
-
-If the server has been assigned the `2001:0db8:2a01:4f8::/64` range, that means it can control all the addresses from `2001:0db8:2a01:04f8:0000:0000:0000:0000` to `2001:0db8:2a01:04f8:ffff:ffff:ffff:ffff`. That's... a lot of addresses. The server is using `2001:0db8:2a01:4f8::1` (or `2001:0db8:2a01:04f8:0000:0000:0000:0001`).
-
-Now, each docker network needs at least an /80 range so that it can generate ip addresses from mac addresses.
+So unfortunately, I'm going to use the reserved range for my docker containers. They're not a special case for routing purposes and they won't collide with existing IPv6 addresses. When I first wrote this post, I was assuming I'd get a /64 range and had some hacky script making that work. That works for Hetzner, but it doesn't for Oracle Cloud, where you have to manually assign IPs and you can get something like up to 10 IPs per VNIC. If you're curious about my original approach, you can find it [on this gist](https://gist.github.com/g3rv4/8ba1ef17b4355bb43c6219a9acb7a400).
 
 So what I'm going to do is:
 
-1. Set `2001:0db8:2a01:4f8:1000::/68` as the default network range. It means the default network will have addresses from `2001:0db8:2a01:04f8:1000:0000:0000:0000` to `2001:0db8:2a01:04f8:1fff:ffff:ffff:ffff`
-2. Add a default address pool that's `2001:0db8:2a01:4f8:2000::/68`, but so that new networks take /80 ranges. In a /68 range there are 4096 /80 ranges, so that's more networks that I'll need.
+1. Set `2001:0db8:0000:0001:1000::/68` as the default network range. It means the default network will have addresses from `2001:0db8:0000:0001:1000:0000:0000:0000` to `2001:0db8:0000:0001:1fff:ffff:ffff:ffff`
+2. Add a default address pool that's `2001:0db8:0000:0001:2000::/68`, but so that new networks take /80 ranges. In a /68 range there are 4096 /80 ranges, so that's more networks that I'll need.
 
 Another small detail: if you don't specify the dns on daemon.json, it won't use the host's information when running in a docker swarm (it's not needed if you don't use a swarm though).
 
-Now, this code is very hacky. I couldn't find a reliable way of manipulating IPv6 ranges on bash so instead of requiring another tool, I'm just doing something that works for my use case.
+You can just run this script to set things up. And it works wether you have a /64 range or just one IPv6 (looking at you, Oracle Cloud!)
 
 ```
-ipv6_with_prefix=$(ip -6 addr show eth0 | grep "scope global" | awk '{print $2}' | head -n1)
-IFS="/" read -ra ADDR <<< "$ipv6_with_prefix"
-ipv6=${ADDR[0]}
-length=${ADDR[1]}
-
-if (( length != 64 )); then
-    echo "Error: Prefix length is not 64"
-    exit 1
-fi
-
-ipv6_68_default="${ipv6%%::*}:1000::/68"
-ipv6_68_new_networks="${ipv6%%::*}:2000::/68"
-
-# Generate /etc/docker/daemon.json
 cat <<EOF | sudo tee /etc/docker/daemon.json >/dev/null
 {
   "ipv6": true,
-  "fixed-cidr-v6": "$ipv6_68_default",
+  "fixed-cidr-v6": "2001:0db8:0000:0001:1000::/68",
   "experimental": true,
   "ip6tables": true,
   "default-address-pools":[
     {"base": "172.31.0.0/16", "size": 24},
-    {"base": "$ipv6_68_new_networks", "size": 80}
+    {"base": "2001:0db8:0000:0001:2000::/68", "size": 80}
   ],
   "dns": ["2a00:1098:2c::1", "2a01:4f9:c010:3f02::1", "2a00:1098:2b::1"]
 }
@@ -103,6 +85,8 @@ EOF
 
 sudo systemctl restart docker
 ```
+
+*WARNING*: If you mention this to an IPv6 absolutist, they will tell you that this is WRONG and that you have to assign public IPs to all your containers. You do you, they do them... but I... I'm going to do this :)
 
 ### Use docker!
 
